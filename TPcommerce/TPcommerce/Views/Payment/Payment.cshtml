@@ -2,8 +2,15 @@
     <div id="card-element">
 
     </div>
+    <div id="card-errors" role="alert"></div>
     <button type="submit">Payer</button>
 </form>
+@* TEST CARDS 
+    Number : 4242 4242 4242 4242
+    Expiration : 04/29
+    CVC : 123
+    ZIP : 90210
+*@
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     var stripe = Stripe('@ViewBag.StripePublishableKey');
@@ -24,7 +31,7 @@
                 var hiddenInput = document.createElement('input');
                 hiddenInput.setAttribute('type', 'hidden');
                 hiddenInput.setAttribute('name', 'stripeToken');
-                hiddenInput.setAttribute('value', token;
+                hiddenInput.setAttribute('value', token);
                 form.appendChild(hiddenInput);
                 form.submit();
             }

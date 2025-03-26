@@ -21,6 +21,19 @@ namespace TPcommerce.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Success()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Failure()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         public IActionResult Charge(string stripeToken)
         {
