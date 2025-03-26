@@ -1,7 +1,13 @@
+using Stripe;
+using TPcommerce.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
 var app = builder.Build();
 
@@ -22,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Payment}/{action=Payment}/{id?}");
 
 app.Run();

@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\views\\payment\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\views\\payment\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\views\\payment\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\views\\payment\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\views\\payment\\failure.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\views\\payment\\failure.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\models\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\models\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|c:\\users\\simon\\onedrive\\desktop\\tp2\\tp1-commerce\\tpcommerce\\tpcommerce\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}|TPcommerce\\TPcommerce.csproj|solutionrelative:tpcommerce\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Failure.cshtml",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Payment\\Failure.cshtml",
+              "RelativeDocumentMoniker": "TPcommerce\\Views\\Payment\\Failure.cshtml",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Payment\\Failure.cshtml",
+              "RelativeToolTip": "TPcommerce\\Views\\Payment\\Failure.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T22:05:28.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Payment\\Success.cshtml",
+              "RelativeDocumentMoniker": "TPcommerce\\Views\\Payment\\Success.cshtml",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Payment\\Success.cshtml",
+              "RelativeToolTip": "TPcommerce\\Views\\Payment\\Success.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T22:04:45.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Payment.cshtml",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Payment\\Payment.cshtml",
+              "RelativeDocumentMoniker": "TPcommerce\\Views\\Payment\\Payment.cshtml",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Payment\\Payment.cshtml",
+              "RelativeToolTip": "TPcommerce\\Views\\Payment\\Payment.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T21:41:34.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TPcommerce\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TPcommerce\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:17:06.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "TPcommerce\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "TPcommerce\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:34:36.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StripeSettings.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Models\\StripeSettings.cs",
+              "RelativeDocumentMoniker": "TPcommerce\\Models\\StripeSettings.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Models\\StripeSettings.cs",
+              "RelativeToolTip": "TPcommerce\\Models\\StripeSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:33:37.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\appsettings.json",
+              "RelativeDocumentMoniker": "TPcommerce\\appsettings.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\appsettings.json",
+              "RelativeToolTip": "TPcommerce\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T21:24:08.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Program.cs",
+              "RelativeDocumentMoniker": "TPcommerce\\Program.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Program.cs",
+              "RelativeToolTip": "TPcommerce\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:17:15.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TPcommerce\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TPcommerce\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-26T21:17:12.371Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

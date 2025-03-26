@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maleb\\RiderProjects\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {}
+    "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maleb\\RiderProjects\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {
+    "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maleb\\RiderProjects\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+        "projectUniqueName": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
         "projectName": "TPcommerce",
-        "projectPath": "C:\\Users\\Maleb\\RiderProjects\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
-        "packagesPath": "C:\\Users\\Maleb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maleb\\RiderProjects\\TPcommerce\\TPcommerce\\obj\\",
+        "projectPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Maleb\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,11 +38,23 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[47.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Maleb\\.dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
