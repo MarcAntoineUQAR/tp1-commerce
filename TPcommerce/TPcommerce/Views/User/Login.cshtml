@@ -1,0 +1,28 @@
+@model TPcommerce.Models.LoginViewModel
+
+@{
+    var message = TempData["message"];
+}
+
+@if (message != null)
+{
+<div><p style="color: red">@message</p></div>
+}
+
+<h2>Page de connexion</h2>
+
+<form method="post" asp-action="LoginPost" asp-controller="Login">
+    <div class="form-group">
+        <label for="Username">Username</label>
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre username", required = "required" })
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Password</label>
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Entrez votre mot de passe", required = "required" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Se connecter</button>
+</form>
+
+<p><a href="/register">Se créer un nouveau compte</a></p>
