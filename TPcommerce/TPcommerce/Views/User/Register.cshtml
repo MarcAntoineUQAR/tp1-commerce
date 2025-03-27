@@ -1,1 +1,44 @@
+@model TPcommerce.Models.RegisterViewModel
+@{
+    Layout = null;
+    var message = TempData["message"];
+}
+
 <h2>Création d'un utilisateur</h2>
+
+@if (message != null)
+{
+    <div><p style="color: red">@message</p></div>
+}
+
+<form method="post" asp-action="Register" asp-controller="Login">
+    <div class="form-group">
+        <label for="Username">Username</label>
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre username", required = "required" })
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Password</label>
+        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @placeholder = "Entrez votre mot de passe", required = "required" })
+    </div>
+
+    <div class="form-group">
+        <label for="ConfirmPassword">Confirm Password</label>
+        @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirmez votre mot de passe", required = "required" })
+    </div>
+
+    <div class="form-group">
+        <label>Role</label><br/>
+        <label for="RoleBuyer">
+            <input type="radio" id="RoleBuyer" name="Role" value="buyer" /> Buyer
+        </label>
+        <label for="RoleSeller">
+            <input type="radio" id="RoleSeller" name="Role" value="seller" /> Seller
+        </label>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">S'inscrire</button>
+</form>
+
+<a href="/">Retour</a>

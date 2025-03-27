@@ -23,27 +23,12 @@ public class LoginController : Controller
     public IActionResult LoginPost([FromForm] LoginViewModel user)
     {
         var result = _userRepository.Login(user);
-        if (result == "Logged in")
+        TempData["message"] = result.Message;
+        if (result.Success)
         {
-            HttpContext.Session.SetString("UserSession", user.Username);
-            TempData["message"] = "Login Successful";
             return RedirectToAction("Index", "Home");
         }
-
-        if (result == "User not found")
-        {
-            TempData["message"] = "Utilisateur non trouvé";
-            return RedirectToAction("Login", "Login");
-        }
-
-        if (result == "Bad Password")
-        {
-            TempData["message"] = "Mot de passe incorrect";
-            return RedirectToAction("Login", "Login");
-        }
-
-        TempData["message"] = "Erreur inconnue";
-        return RedirectToAction("Login", "Login");
+        return RedirectToAction("Login");
     }
 
     [HttpGet("logout")]
@@ -60,9 +45,15 @@ public class LoginController : Controller
         return View("../User/Register");
     }
 
-    [HttpPost("register")]
-    public IActionResult Register()
+    [HttpPost]
+    public IActionResult Register([FromForm] RegisterViewModel user)
     {
-        return null; // Complète cette méthode selon ton besoin
+        var message = _userRepository.AddUser(user);
+        TempData["message"] = message.Message;
+        if (!message.Success)
+        {
+            return RedirectToAction("GetRegister", "Login");
+        }
+        return RedirectToAction("Login", "Login");
     }
 }
