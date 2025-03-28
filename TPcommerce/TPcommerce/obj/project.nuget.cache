@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eQuBTbUDao4=",
+  "dgSpecHash": "aes+ukqKsJg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\Maleb\\.nuget\\packages\\mysql.data\\9.2.0\\mysql.data.9.2.0.nupkg.sha512",
     "C:\\Users\\Maleb\\.nuget\\packages\\mysql.entityframeworkcore\\8.0.0\\mysql.entityframeworkcore.8.0.0.nupkg.sha512",
     "C:\\Users\\Maleb\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
+    "C:\\Users\\Maleb\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Maleb\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.2\\pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512",
     "C:\\Users\\Maleb\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Maleb\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<TPcommerce.Repository.UserRepository>();
 builder.Services.AddScoped<TPcommerce.Repository.BaseRepository>();
+builder.Services.AddScoped<TPcommerce.Repository.ProductRepository>();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
