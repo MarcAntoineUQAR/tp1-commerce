@@ -26,4 +26,8 @@
       <Folder Include="Migrations\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Views\Products\Products.cshtml" />
+    </ItemGroup>
+
 </Project>

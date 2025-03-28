@@ -26,6 +26,36 @@ namespace TPcommerce.Repository
             }
         }
 
+        public GenericResponse<List<Product>> GetProductsBySearchTerm(string searchTerm)
+        {
+            try
+            {
+                TpcommerceContext context = new TpcommerceContext();
+                var list = context.Products.Where(p => p.Title.Contains(searchTerm) || p.Category.Contains(searchTerm))
+                    .OrderBy(s => s.Id).ToList();
+                return new GenericResponse<List<Product>>(list, "rechercher reussite", true);
+            }
+            catch (Exception e)
+            {
+                return new GenericResponse<List<Product>>("Erreur survenu:" + e, false);
+            }
+        }
+
+        public GenericResponse<string> CreateProduct(Product product)
+        {
+            try
+            {
+                TpcommerceContext context = new TpcommerceContext();
+                context.Products.Add(product);
+                context.SaveChanges();
+                return new GenericResponse<string>("Product created successfully", true);
+            }
+            catch (Exception e)
+            {
+                return new GenericResponse<string>("Erreur survenu:" + e, false);
+            }
+        }
+
         public async Task<List<Product>> GetProductsFromAPIRest()
         {
             try
@@ -38,7 +68,6 @@ namespace TPcommerce.Repository
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error fetching products: {ex.Message}");
                 return new List<Product>();
             }
         }
