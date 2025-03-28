@@ -22,6 +22,7 @@ C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\MySql.Data.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
@@ -59,4 +60,3 @@ C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.pdb
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.genruntimeconfig.cache
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\ref\TPcommerce.dll
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Newtonsoft.Json.dll
