@@ -42,6 +42,20 @@ public class ProductsController : Controller
         }
     }
 
+    public IActionResult Details(int id)
+    {
+        var result = _productRepository.GetSingleProduct(id);
+        if (result.Success && result.Data != null)
+        {
+            return View("../products/specificproduct", result.Data);
+        }
+        else
+        {
+            TempData["Message"] = result.Message;
+            return RedirectToAction("Index");
+        }
+    }
+
     [HttpGet("products/add")]
     public IActionResult GetAddProduct()
     {

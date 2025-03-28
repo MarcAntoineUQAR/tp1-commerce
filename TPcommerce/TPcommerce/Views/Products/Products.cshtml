@@ -33,13 +33,11 @@
     {
         <div class="card mb-4 shadow-lg border-0">
             <div class="row g-0">
-                <!-- Left: Product Image -->
                 <div class="col-md-4 d-flex align-items-center bg-light">
                     <img src="@product.Image" class="img-fluid rounded-start" alt="@product.Title"
                          style="max-height: 200px; object-fit: cover; width: 100%;">
                 </div>
 
-                <!-- Right: Product Details -->
                 <div class="col-md-8">
                     <div class="card-body">
                         <h3 class="card-title fw-bold text-warning">@product.Title</h3>
@@ -47,12 +45,11 @@
                         <p class="text-secondary">@product.Description</p>
                         <h5 class="fw-bold text-success">💰 Prix: @product.Price $</h5>
 
-                        <div class="d-flex align-items-center mt-3">
-                            <input type="number" class="form-control me-2" min="1" value="1" style="width: 80px;">
-                            <button class="btn btn-warning fw-bold">
-                                <i class="bi bi-cart-plus"></i> Ajouter au panier
-                            </button>
-                        </div>
+                        <form method="get" asp-action="Details" asp-controller="Products">
+                            <input type="hidden" name="id" value="@product.Id" />
+                            <button type="submit" class="btn btn-warning">Consulter</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
