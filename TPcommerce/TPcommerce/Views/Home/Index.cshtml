@@ -2,9 +2,16 @@
     var message = TempData["message"];
 }
 
-@if (message != null)
-{
-<div><p style="color: red">@message</p></div>
-}
+<div class="container mt-5 text-center">
+    @if (message != null)
+    {
+        <div class="alert alert-danger">@message</div>
+    }
 
-<h2>Page d'accueil</h2>
+    <div class="jumbotron p-5 bg-light shadow rounded">
+        <h1 class="display-4">Bienvenue sur notre magasin en ligne !</h1>
+        <p class="lead">Découvrez nos meilleurs produits et offres exclusives.</p>
+        <hr class="my-4">
+        <p>Explorez notre catalogue et trouvez ce qui vous convient.</p>
+    </div>
+</div>

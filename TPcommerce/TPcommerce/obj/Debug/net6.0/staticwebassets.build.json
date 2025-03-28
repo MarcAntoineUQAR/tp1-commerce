@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PNOvjwaGSBuoYJJ6gDoYbjuXyfi/T4JFSG7r6qWgCe4=",
+  "Hash": "MGhdTdDZGZcEbI8sZMiMU8RmJNoOtn90mFZAjxO6bpI=",
   "Source": "TPcommerce",
   "BasePath": "_content/TPcommerce",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TPcommerce.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\wwwroot\\css\\outersite.css",
+      "SourceId": "TPcommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\wwwroot\\",
+      "BasePath": "_content/TPcommerce",
+      "RelativePath": "css/outersite.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\outersite.css"
     },
     {
       "Identity": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\wwwroot\\css\\site.css",

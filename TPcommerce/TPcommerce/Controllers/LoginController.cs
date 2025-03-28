@@ -26,6 +26,7 @@ public class LoginController : Controller
         TempData["message"] = result.Message;
         if (result.Success)
         {
+            HttpContext.Session.SetInt32("UserId", result.Data.Id);
             return RedirectToAction("Index", "Home");
         }
         return RedirectToAction("Login");
@@ -34,7 +35,7 @@ public class LoginController : Controller
     [HttpGet("logout")]
     public IActionResult Logout()
     {
-        HttpContext.Session.Remove("UserSession");
+        HttpContext.Session.Remove("UserToken");
         TempData["message"] = "Logout successful";
         return RedirectToAction("Login", "Login");
     }

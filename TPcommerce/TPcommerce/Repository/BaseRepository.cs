@@ -6,6 +6,11 @@ public class BaseRepository
 {
     public void PeuplateDbContext()
     {
+        PopulateUser();
+    }
+
+    public void PopulateUser()
+    {
         TpcommerceContext context = new TpcommerceContext();
         if (!context.Users.Any())
         {
@@ -24,5 +29,10 @@ public class BaseRepository
             context.Users.Add(buyer);
             context.SaveChanges();
         }
+    }
+
+    public void PopulateProduct()
+    {
+        
     }
 }

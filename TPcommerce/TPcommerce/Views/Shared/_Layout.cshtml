@@ -11,9 +11,9 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FFC107;">
         <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Yadashop</a>
+            <a class="navbar-brand text-dark fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Yadashop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,25 +21,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Info utilisateur</a>
+                        <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="User" asp-action="Index">Info utilisateur</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Parcourir produits</a>
+                        <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="Products" asp-action="Index">Parcourir produits</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ShoppingCart" asp-action="Index">
+                        <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="ShoppingCart" asp-action="Index">
                             <i class="bi bi-cart"></i> Voir panier
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="TransactionHistory" asp-action="Index">
+                        <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="TransactionHistory" asp-action="Index">
                             <i class="bi bi-clock-history"></i> Voir historique
                         </a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-danger" asp-area="" asp-controller="Login" asp-action="Logout">
+                        <a class="nav-link text-danger fw-semibold" asp-area="" asp-controller="Login" asp-action="Logout">
                             <i class="bi bi-box-arrow-right"></i> Logout
                         </a>
                     </li>
@@ -54,9 +54,9 @@
     </main>
 </div>
 
-<footer class="border-top footer text-muted">
+<footer class="border-top footer text-muted text-center p-3" style="background-color: #FFD54F;">
     <div class="container">
-        Fait par scuffed gaming inc.
+        Fait par Scuffed Gaming Inc.
     </div>
 </footer>
 

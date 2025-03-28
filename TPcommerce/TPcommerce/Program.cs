@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -35,8 +37,8 @@ app.Use(async (context, next) =>
     await next();
 });
 
-
 app.UseRouting();
+
 app.UseSession();
 
 app.UseAuthorization();

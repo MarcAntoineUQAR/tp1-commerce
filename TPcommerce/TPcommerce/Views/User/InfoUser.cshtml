@@ -1,14 +1,36 @@
 @model TPcommerce.Models.User
-<h2>Info sur l'utilisateur</h2>
-<div>
-    <h2>Ceci est les Users</h2>
-    <hr/>
-    <p style="font-weight: bold">Id: </p>
-    <p>@Model.Id</p>
-    <p style="font-weight: bold">Username: </p>
-    <p>@Model.Username</p>
-    <p style="font-weight: bold">Role: </p>
-    <p>@Model.Role</p>
-    <p style="font-weight: bold">Password: </p>
-    <p>@Model.Password</p>
+@{
+    var message = TempData["message"];
+}
+
+<div class="container mt-5" style="max-width: 500px;">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Informations de l'utilisateur</h2>
+
+        @if (message != null)
+        {
+            <div class="alert alert-danger text-center">@message</div>
+        }
+
+        <div class="mb-3">
+            <p class="fw-bold">Id:</p>
+            <p class="text-muted">@Model.Id</p>
+        </div>
+        <div class="mb-3">
+            <p class="fw-bold">Username:</p>
+            <p class="text-muted">@Model.Username</p>
+        </div>
+        <div class="mb-3">
+            <p class="fw-bold">Role:</p>
+            <p class="text-muted">@Model.Role</p>
+        </div>
+        <div class="mb-3">
+            <p class="fw-bold">Password:</p>
+            <p class="text-muted">@Model.Password</p>
+        </div>
+
+        <div class="text-center mt-3">
+            @Html.ActionLink("Modifier l'utilisateur", "GetUpdateUser", Model, new{@class = "btn btn-warning"})
+        </div>
+    </div>
 </div>
