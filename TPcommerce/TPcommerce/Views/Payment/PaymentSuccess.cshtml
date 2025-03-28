@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Paiement Réussi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-success">Paiement Réussi</h2>
+    <p>Votre paiement a été effectué avec succès. Merci pour votre achat !</p>
+
+    <h3>Facture</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Remplacer avec contenu dynamique -->
+            <tr>
+                <td>Produit 1</td>
+                <td>1</td>
+                <td>€10.00</td>
+            </tr>
+            <tr>
+                <td>Produit 2</td>
+                <td>2</td>
+                <td>€20.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Total</th>
+                <th>€50.00</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>

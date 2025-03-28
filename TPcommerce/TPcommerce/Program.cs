@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Authentication;
+using Stripe;
+using TPcommerce.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 builder.Services.AddScoped<TPcommerce.Repository.UserRepository>();
 builder.Services.AddScoped<TPcommerce.Repository.BaseRepository>();
 builder.Services.AddScoped<TPcommerce.Repository.ProductRepository>();
@@ -14,6 +17,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
 var app = builder.Build();
 

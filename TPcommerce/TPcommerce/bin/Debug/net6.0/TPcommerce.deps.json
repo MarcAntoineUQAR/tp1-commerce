@@ -14,7 +14,8 @@
           "MySql.Data": "9.2.0",
           "MySql.EntityFrameworkCore": "8.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
+          "Pomelo.EntityFrameworkCore.MySql": "6.0.2",
+          "Stripe.net": "47.4.0"
         },
         "runtime": {
           "TPcommerce.dll": {}
@@ -286,6 +287,18 @@
           "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll": {
             "assemblyVersion": "6.0.2.0",
             "fileVersion": "6.0.2.0"
+          }
+        }
+      },
+      "Stripe.net/47.4.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "assemblyVersion": "47.4.0.0",
+            "fileVersion": "47.4.0.0"
           }
         }
       },
@@ -687,6 +700,13 @@
       "sha512": "sha512-KvlZ800CnEuEGnxj5OT1fCKGjQXxW5kpPlCP91JqBYG+2Z3927eqXmlX6LLKUt4swqE8ZsEQ+Zkpab8bqstf4g==",
       "path": "pomelo.entityframeworkcore.mysql/6.0.2",
       "hashPath": "pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512"
+    },
+    "Stripe.net/47.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-paFQ1NFjdjd3BHkYS1qOmy7T+Bz663tgAC0unsGu7GLHrWTl5SISj6ukGB6nuycV6a1GA9VZr18eCi4pWNpE2w==",
+      "path": "stripe.net/47.4.0",
+      "hashPath": "stripe.net.47.4.0.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
