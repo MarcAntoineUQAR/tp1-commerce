@@ -1,0 +1,35 @@
+@model TPcommerce.Models.UserModel
+@{
+    var message = TempData["message"];
+}
+@if (message != null)
+{
+    <div class="alert alert-danger text-center">@message</div>
+}
+
+<div class="container mt-5" style="max-width: 400px;">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Mise à jour du profil</h2>
+
+        <form method="post" asp-action="UpdateUser" asp-controller="User">
+            <input type="hidden" name="Id" value="@Model.Id"/>
+            <input type="hidden" name="Role" value="@Model.Role"/>
+
+            <div class="mb-3">
+                <label class="form-label">Nouveau Username</label>
+                <input type="text" name="Username" class="form-control" placeholder="@Model.Username" required/>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Nouveau Mot de passe</label>
+                <input type="password" name="Password" class="form-control" placeholder="@Model.Password" required/>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100">Enregistrer</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="/user" class="btn btn-link">Retour</a>
+        </div>
+    </div>
+</div>

@@ -54,4 +54,32 @@ public class UserRepository
         User user = context.Users.FirstOrDefault(u => u.Id == userId)!;
         return user;
     }
+
+    public GenericResponse<User> UpdateUser(int id, User user)
+    {
+        using var context = new TpcommerceContext();
+    
+        var oldUser = context.Users.FirstOrDefault(u => u.Id == id);
+        if (oldUser == null)
+        {
+            return new GenericResponse<User>("Utilisateur introuvable", false);
+        }
+
+        oldUser.Username = user.Username;
+        oldUser.Password = user.Password;
+        oldUser.Role = user.Role;
+
+        try
+        {
+            context.Users.Update(oldUser);
+            context.SaveChanges();
+        }
+        catch (Exception e)
+        {
+            return new GenericResponse<User>("Erreur inattendue: " + e.Message, false);
+        }
+
+        return new GenericResponse<User>("Utilisateur modifié avec succès!", true);
+    }
+
 }

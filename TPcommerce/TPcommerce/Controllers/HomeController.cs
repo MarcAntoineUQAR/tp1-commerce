@@ -24,19 +24,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult FirstConnection()
     {
-        HttpContext.Session.SetString("TestSession", "Hello World");
-        var testValue = HttpContext.Session.GetString("TestSession");
-        Console.WriteLine($"Session Value: {testValue}");
-
         _repository.PeuplateDbContext();
-
-        if (HttpContext.Session.GetString("UserSession") != null)
-        {
-            ViewData["message"] = "Session already open, welcome";
-            return RedirectToAction("Index", "Home");
-        }
-    
         return RedirectToAction("Login", "Login");
     }
-
 }

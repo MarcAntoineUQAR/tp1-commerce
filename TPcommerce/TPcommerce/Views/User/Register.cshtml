@@ -1,44 +1,50 @@
 @model TPcommerce.Models.RegisterViewModel
 @{
-    Layout = null;
-    var message = TempData["message"];
+Layout = "_OuterLayout";
+var message = TempData["message"];
 }
+<div class="container" style="max-width: 500px;">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Création d'un utilisateur</h2>
 
-<h2>Création d'un utilisateur</h2>
+        @if (message != null)
+        {
+        <div class="alert alert-danger text-center">@message</div>
+        }
 
-@if (message != null)
-{
-    <div><p style="color: red">@message</p></div>
-}
+        <form method="post" asp-action="Register" asp-controller="Login">
+            <div class="mb-3">
+                <label for="Username" class="form-label">Username</label>
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre username", required = "required" })
+            </div>
 
-<form method="post" asp-action="Register" asp-controller="Login">
-    <div class="form-group">
-        <label for="Username">Username</label>
-        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre username", required = "required" })
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Entrez votre mot de passe", required = "required" })
+            </div>
+
+            <div class="mb-3">
+                <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirmez votre mot de passe", required = "required" })
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Role</label>
+                <div class="form-check">
+                    <input type="radio" id="RoleBuyer" name="Role" value="buyer" class="form-check-input" />
+                    <label for="RoleBuyer" class="form-check-label">Buyer</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="RoleSeller" name="Role" value="seller" class="form-check-input" />
+                    <label for="RoleSeller" class="form-check-label">Seller</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100">S'inscrire</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="/" class="btn btn-link">Retour</a>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for="Password">Password</label>
-        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @placeholder = "Entrez votre mot de passe", required = "required" })
-    </div>
-
-    <div class="form-group">
-        <label for="ConfirmPassword">Confirm Password</label>
-        @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirmez votre mot de passe", required = "required" })
-    </div>
-
-    <div class="form-group">
-        <label>Role</label><br/>
-        <label for="RoleBuyer">
-            <input type="radio" id="RoleBuyer" name="Role" value="buyer" /> Buyer
-        </label>
-        <label for="RoleSeller">
-            <input type="radio" id="RoleSeller" name="Role" value="seller" /> Seller
-        </label>
-    </div>
-
-
-    <button type="submit" class="btn btn-primary">S'inscrire</button>
-</form>
-
-<a href="/">Retour</a>
+</div>
