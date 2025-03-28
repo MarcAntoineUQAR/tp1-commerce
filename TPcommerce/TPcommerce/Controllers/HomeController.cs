@@ -24,7 +24,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult FirstConnection()
     {
-        _repository.PeuplateDbContext();
+        _repository.PopulateDbContext();
         return RedirectToAction("Login", "Login");
     }
 }

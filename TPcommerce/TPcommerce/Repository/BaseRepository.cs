@@ -4,12 +4,20 @@ namespace TPcommerce.Repository;
 
 public class BaseRepository
 {
-    public void PeuplateDbContext()
+    private ProductRepository _productRepository;
+
+    public BaseRepository(ProductRepository productRepository)
     {
-        PopulateUser();
+        _productRepository = productRepository;
     }
 
-    public void PopulateUser()
+    public void PopulateDbContext()
+    {
+        PopulateUser();
+        PopulateProduct();
+    }
+
+    private void PopulateUser()
     {
         TpcommerceContext context = new TpcommerceContext();
         if (!context.Users.Any())
@@ -31,8 +39,14 @@ public class BaseRepository
         }
     }
 
-    public void PopulateProduct()
+    private void PopulateProduct()
     {
-        
+        TpcommerceContext context = new TpcommerceContext();
+        if (!context.Products.Any())
+        {
+            var productList = _productRepository.GetProductsFromAPIRest().Result;
+            context.Products.AddRange(productList);
+            context.SaveChanges();
+        }
     }
 }
