@@ -14,5 +14,7 @@ artifacts/
 *.suo
 *.userosscache
 *.sln.docstates
+*.dll
+*.pdb
 
 *.nupkg
