@@ -1,2 +1,14 @@
 @model TPcommerce.Models.ShoppingCart
 <h2>Voici le panier d'achat</h2>
+<div>
+    <h3>Produit dans le panier:</h3>
+    @foreach (var item in Model.Products)
+    {
+        <h4>@item.Product.Title</h4>
+        <h5>@item.Product.Description</h5>
+        <h5>@item.Product.Category</h5>
+        <h5>@item.Product.Price</h5>
+        <h4>Qte: @item.Quantity</h4>
+    }
+    <h2>Prix Total: @Model.TotalPrice $</h2>
+</div>

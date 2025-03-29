@@ -1,4 +1,5 @@
 using TPcommerce.Models;
+using TPcommerce.Models.DTO;
 
 namespace TPcommerce.Repository;
 
