@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using TPcommerce.Models;
 using TPcommerce.Repository;
 using Microsoft.AspNetCore.Http;
+using TPcommerce.Models.DTO;
 
 namespace TPcommerce.Controllers
 {
@@ -29,13 +30,13 @@ namespace TPcommerce.Controllers
         }
 
         [HttpGet("user/update")]
-        public IActionResult GetUpdateUser(UserModel user)
+        public IActionResult GetUpdateUser(User user)
         {
             return View("../user/UpdateUser", user);
         }
 
         [HttpPost("user/update")]
-        public IActionResult UpdateUser([FromForm] UserModel user)
+        public IActionResult UpdateUser([FromForm] User user)
         {
             var result = _userRepository.UpdateUser(user.Id, user);
             if (result.Success)

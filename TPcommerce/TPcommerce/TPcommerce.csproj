@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Migrations\" />
+      <AdditionalFiles Include="Views\Products\Products.cshtml" />
     </ItemGroup>
 
 </Project>

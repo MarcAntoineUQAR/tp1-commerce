@@ -1,0 +1,49 @@
+@model TPcommerce.Models.Product
+@{
+var message = TempData["message"];
+}
+
+@if (message != null)
+{
+<div class="alert alert-danger mt-2 text-center alert-dismissible fade show" role="alert">
+    @message
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+}
+
+<a href="/products" class="btn btn-link text-warning">Retour</a>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4 text-warning">Ajouter un produit</h2>
+
+    <form method="post" asp-action="AddProduct" asp-controller="Products">
+        <div class="mb-3">
+            <label for="Title" class="form-label text-dark">Nom du produit</label>
+            <input id="Title" name="Title" class="form-control" required/>
+        </div>
+
+        <div class="mb-3">
+            <label for="Category" class="form-label text-dark">Catégorie</label>
+            <input id="Category" name="Category" class="form-control" required/>
+        </div>
+
+        <div class="mb-3">
+            <label for="Description" class="form-label text-dark">Description</label>
+            <input id="Description" name="Description" class="form-control" required/>
+        </div>
+
+        <div class="mb-3">
+            <label for="Price" class="form-label text-dark">Prix</label>
+            <input id="Price" name="Price" type="number" step="0.01" class="form-control" required/>
+        </div>
+
+        <div class="mb-3">
+            <label for="Image" class="form-label text-dark">Image URL</label>
+            <input id="Image" name="Image" class="form-control" required/>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <button type="submit" class="btn btn-warning text-dark fw-bold">Ajouter le produit</button>
+        </div>
+    </form>
+</div>
