@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using TPcommerce.Models;
+using TPcommerce.Models.DTO;
 
 namespace TPcommerce.Repository;
 
@@ -51,7 +53,7 @@ public class UserRepository
     public User ShowUserDetails(int userId)
     {
         TpcommerceContext context = new TpcommerceContext();
-        User user = context.Users.FirstOrDefault(u => u.Id == userId)!;
+        User user = context.Users.Include(u => u.ShoppingCart).FirstOrDefault(u => u.Id == userId);
         return user;
     }
 
