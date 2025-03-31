@@ -1,1 +1,49 @@
-<h2>Ceci est l'historique des transactions</h2>
+@model IEnumerable<TPcommerce.Models.Bill>
+
+@{
+    ViewBag.Title = "Historique des Transactions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2>Historique des Transactions</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Facture ID</th>
+                    <th>Total (€)</th>
+                    <th>Détails de Paiement</th>
+                    <th>Produits</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bill in Model)
+                {
+                    <tr>
+                        <td>@bill.Id</td>
+                        <td>@bill.TotalPrice</td>
+                        <td>
+                            Nom: @bill.PaymentInfos?.FullName<br />
+                            Carte: @bill.PaymentInfos?.CardType
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (var item in bill.Products)
+                                {
+                                    <li>@item.Product - @item.Quantity x @item.Price$</li>
+                                }
+                            </ul>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Aucune transaction trouvée.</p>
+    }
+</div>
