@@ -128,7 +128,8 @@ C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug
 C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TPcommerce.props
 C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TPcommerce.props
 C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
 C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.csproj.Up2Date
 C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.genruntimeconfig.cache
 C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\ref\TPcommerce.dll
+C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Stripe.net.dll
+C:\Users\simon\OneDrive\Desktop\tp2\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt

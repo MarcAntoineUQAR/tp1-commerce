@@ -1,1 +1,47 @@
-<h2>Ceci est l'historique des transactions</h2>
+﻿@model List<TPcommerce.Models.Bill>
+@{
+    ViewBag.Title = "Historique des Transactions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-4">
+    <h2 class="text-center mb-4 text-warning fw-bold">🧾 Historique des Transactions</h2>
+
+    @if (!Model.Any())
+    {
+        <p>Vous n'avez encore effectué aucun achat.</p>
+    }
+    else
+    {
+        foreach (var bill in Model)
+        {
+            <div class="card my-4 shadow">
+                <div class="card-header bg-warning text-white">
+                    <strong>Facture #@bill.Id</strong> — Total: <strong>@bill.TotalPrice.ToString("C")</strong>
+                </div>
+                <div class="card-body">
+                    <p><strong>Paiement:</strong> @bill.PaymentInfos.CardType</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Quantité</th>
+                                <th>Prix</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in bill.Products)
+                            {
+                                <tr>
+                                    <td>@item.Product?.Title</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@(item.Product?.Price * item.Quantity)$</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+</div>
+

@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card border-danger shadow">
+                <div class="card-header bg-danger text-white">
+                    <h3 class="card-title mb-0">Erreur de paiement</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Une erreur est survenue lors du traitement de votre paiement.
+                        Veuillez réessayer ou contacter le support pour obtenir de l’aide.
+                    </p>
+                    <a href="~/Payment/Index" class="btn btn-danger btn-block">Réessayer le paiement</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
