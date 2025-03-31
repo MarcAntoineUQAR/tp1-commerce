@@ -1,6 +1,10 @@
+using TPcommerce.Models.DTO;
+
 namespace TPcommerce.Models;
 
-public class UserModel : TPcommerce.Models.User
+public class UserModel : User
 {
-    public ShoppingCart? ShoppingCart { get; set; }
+    public int ShoppingCartId { get; set; }
+    
+    public ShoppingCart ShoppingCart { get; set; }
 }

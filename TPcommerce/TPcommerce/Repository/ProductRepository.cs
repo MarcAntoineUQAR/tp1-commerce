@@ -56,6 +56,20 @@ namespace TPcommerce.Repository
             }
         }
 
+        public GenericResponse<Product> GetSingleProduct(int id)
+        {
+            try
+            {
+                TpcommerceContext context = new TpcommerceContext();
+                var product = context.Products.Find(id);
+                return new GenericResponse<Product>(product!, "reussi", true);
+            }
+            catch (Exception e)
+            {
+                return new GenericResponse<Product>("Erreur survenu:" + e, false);
+            }
+        }
+
         public async Task<List<Product>> GetProductsFromAPIRest()
         {
             try
