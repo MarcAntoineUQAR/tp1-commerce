@@ -1,0 +1,33 @@
+@model TPcommerce.Models.Product
+@{
+}
+<div class="container mt-4">
+    <a href="/products" class="btn btn-link text-warning mb-2">Retour</a>
+    <div class="card mb-4 shadow-lg border-0">
+        <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center bg-light">
+                <img src="@Model.Image" class="img-fluid rounded-start" alt="@Model.Title"
+                     style="max-height: 200px; object-fit: cover; width: 100%;">
+            </div>
+
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title fw-bold text-warning">@Model.Title</h3>
+                    <h5 class="text-muted">Catégorie: <span class="text-dark">@Model.Category</span></h5>
+                    <p class="text-secondary">@Model.Description</p>
+                    <h5 class="fw-bold text-success">💰 Prix: @Model.Price $</h5>
+
+                    <div class="d-flex align-items-center mt-3">
+                        <form method="post" asp-controller="ShoppingCart" asp-action="AddProductToShoppingCart">
+                            <input name="quantity" type="number" class="form-control me-2" min="1" value="1" style="width: 80px;">
+                            <input type="hidden" name="productId" value="@Model.Id" />
+                            <button class="btn btn-warning fw-bold mt-2">
+                                <i class="bi bi-cart-plus"></i> Ajouter au panier
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

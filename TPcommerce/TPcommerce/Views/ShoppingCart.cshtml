@@ -1,1 +1,63 @@
-<h2>Voici le panier d'achat</h2>
+@model TPcommerce.Models.ShoppingCart
+@{
+var message = TempData["message"];
+}
+
+@if (message != null)
+{
+<div class="alert alert-danger mt-2 text-center alert-dismissible fade show" role="alert">
+    @message
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+}<div>
+    
+</div>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4 text-warning fw-bold">🛒 Votre Panier!</h2>
+
+    @if (Model.ShoppingCartItems.Count <= 0)
+    {
+    <h3 class="text-center">Votre panier est vide ! 🥴</h3>
+    <div class="text-center">
+        <a href="/products" class="btn btn-warning text-decoration-none">Continuer les achats</a>
+    </div>
+    }
+    else
+    {
+    <form method="post" asp-controller="ShoppingCart" asp-action="ClearShoppingCart" class="text-end mb-3">
+        <button type="submit" class="btn btn-danger fw-bold">🗑️ Vider le panier</button>
+    </form>
+
+    @foreach (var item in Model.ShoppingCartItems)
+    {
+    <div class="card mb-4 shadow-lg border-0">
+        <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center bg-light">
+                <img src="@item.Product.Image" class="img-fluid rounded-start" alt="@item.Product.Title" style="max-height: 200px; object-fit: cover; width: 100%;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title fw-bold text-warning">@item.Product.Title</h3>
+                    <h5 class="text-muted">Catégorie: <span class="text-dark">@item.Product.Category</span></h5>
+                    <p class="text-secondary">@item.Product.Description</p>
+                    <h5 class="fw-bold text-success">💰 Prix: @item.Product.Price $</h5>
+                    <h5 class="fw-bold text-dark">Quantité: @item.Quantity</h5>
+
+                    <form method="post" asp-controller="ShoppingCart" asp-action="RemoveProductFromShoppingCart">
+                        <input type="hidden" name="productId" value="@item.ProductId" />
+                        <button type="submit" class="btn btn-danger">❌ Retirer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    <div class="text-center">
+        <h2 class="fw-bold text-success">💰 Total: @Model.TotalPrice $</h2>
+        <form method="post" asp-controller="ShoppingCart" asp-action="Checkout">
+            <button type="submit" class="btn btn-warning fw-bold mb-4">🛍️ Payer</button>
+        </form>
+    </div>
+    }
+</div>
