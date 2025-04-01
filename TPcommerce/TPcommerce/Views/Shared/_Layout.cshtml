@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FFC107;">
             <div class="container-fluid">
-                <a class="navbar-brand text-dark fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Yadashop</a>
+                <a class="navbar-brand text-dark fw-bold" asp-area="" asp-controller="Home" asp-action="Index">IGA 2</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,22 +24,22 @@
                     }
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="User" asp-action="Index">Info utilisateur</a>
+                            <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="User" asp-action="Index">Mon profil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="Products" asp-action="Index">Parcourir produits</a>
+                            <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="Products" asp-action="Index">Parcourir les produits</a>
                         </li>
 
                         @if (role != "seller")
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="ShoppingCart" asp-action="Index">
-                                    <i class="bi bi-cart"></i> Voir panier
+                                    <i class="bi bi-cart"></i> Panier
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark fw-semibold" asp-area="" asp-controller="TransactionHistory" asp-action="Index">
-                                    <i class="bi bi-clock-history"></i> Voir historique
+                                    <i class="bi bi-clock-history"></i> Mes achats
                                 </a>
                             </li>
                         }
@@ -57,7 +57,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link text-danger fw-semibold" asp-area="" asp-controller="Login" asp-action="Logout">
-                                <i class="bi bi-box-arrow-right"></i> Logout
+                                <i class="bi bi-box-arrow-right"></i> Déconnexion
                             </a>
                         </li>
                     </ul>
