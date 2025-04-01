@@ -13,6 +13,39 @@
 }
 
 <div class="container mt-4">
+    @if (userRole?.ToString() == "seller" && ViewBag.SellerProducts is List<TPcommerce.Models.Product> sellerProducts && sellerProducts.Count > 0)
+    {
+        <div class="mt-5">
+            <h2 class="text-center mb-4 text-warning fw-bold">Mes produits en vente</h2>
+
+            @foreach (var product in sellerProducts)
+            {
+                <div class="card mb-4 shadow-sm border border-warning">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex align-items-center bg-light">
+                            <img src="@product.Image" class="img-fluid rounded-start" alt="@product.Title"
+                                 style="max-height: 200px; object-fit: cover; width: 100%;">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold text-warning">@product.Title</h4>
+                                <h6 class="text-muted">Catégorie: <span class="text-dark">@product.Category</span></h6>
+                                <p class="text-secondary">@product.Description</p>
+                                <h5 class="fw-bold text-success">💰 Prix: @product.Price $</h5>
+
+                                <form method="get" asp-action="Details" asp-controller="Products">
+                                    <input type="hidden" name="id" value="@product.Id" />
+                                    <button type="submit" class="btn btn-warning">Voir</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
     <h2 class="text-center mb-4 text-warning fw-bold">🛍️ Liste des Produits</h2>
 
     <div class="mb-3 d-flex align-items-center">
@@ -20,13 +53,16 @@
             <input type="text" name="searchTerm" class="form-control w-75" placeholder="🔎 Rechercher"/>
         </form>
 
-        <div class="ms-auto">
-            <form method="get" asp-controller="Products" asp-action="GetAddProduct">
-                <button type="submit" class="btn btn-warning fw-bold @(userRole?.ToString() == "seller" ? "" : "disabled")" aria-label="Ajouter un produit">
-                    <i class="bi bi-plus-circle"></i> Ajouter un produit
-                </button>
-            </form>
-        </div>
+        @if (userRole?.ToString() == "seller")
+        {
+            <div class="ms-auto">
+                <form method="get" asp-controller="Products" asp-action="GetAddProduct">
+                    <button type="submit" class="btn btn-warning fw-bold" aria-label="Ajouter un produit">
+                        <i class="bi bi-plus-circle"></i> Ajouter un produit
+                    </button>
+                </form>
+            </div>
+        }
     </div>
 
     @foreach (var product in Model)

@@ -24,7 +24,13 @@ var message = TempData["message"];
 
         <div class="mb-3">
             <label for="Category" class="form-label text-dark">Catégorie</label>
-            <input id="Category" name="Category" class="form-control" required/>
+            <select id="Category" name="Category" class="form-select" required>
+                <option value="">-- Choisir une catégorie --</option>
+                @foreach (var category in ViewBag.Categories as List<string>)
+                {
+                    <option value="@category">@category</option>
+                }
+            </select>
         </div>
 
         <div class="mb-3">

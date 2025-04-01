@@ -29,6 +29,13 @@ public class ProductsController : Controller
         {
             TempData["Role"] = user.Role;
 
+            if (user.Role == "seller")
+            {
+                var context = new TpcommerceContext();
+                var sellerProducts = context.Products.Where(p => p.SellerId == user.Id).ToList();
+                ViewBag.SellerProducts = sellerProducts;
+            }
+
             if (!string.IsNullOrEmpty(searchTerm) && result.Data.Count == 0)
             {
                 TempData["Message"] = "No products found";
@@ -42,6 +49,7 @@ public class ProductsController : Controller
             return RedirectToAction("Index", "Home");
         }
     }
+
 
     public IActionResult Details(int id)
     {
@@ -67,16 +75,35 @@ public class ProductsController : Controller
             return RedirectToAction("Index", "Home");
         }
 
+        var context = new TpcommerceContext();
+        var categories = context.Products
+            .Select(p => p.Category)
+            .Distinct()
+            .OrderBy(c => c)
+            .ToList();
+
+        ViewBag.Categories = categories;
+
         return View("../products/addproduct");
     }
+
 
     [HttpPost("products/add")]
     public IActionResult AddProduct([FromForm] Product product)
     {
+        var user = GetUser();
+        if (user.Role != "seller")
+        {
+            TempData["message"] = "Tu n'es pas autorisé à faire ça!";
+            return RedirectToAction("Index", "Home");
+        }
+
+        product.SellerId = user.Id;
         var result = _productRepository.CreateProduct(product);
         TempData["message"] = result.Message;
         return RedirectToAction("Index");
     }
+
 
     private User GetUser()
     {

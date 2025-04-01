@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TPcommerce;
 
@@ -10,9 +11,10 @@ using TPcommerce;
 namespace TPcommerce.Migrations
 {
     [DbContext(typeof(TpcommerceContext))]
-    partial class TpcommerceContextModelSnapshot : ModelSnapshot
+    [Migration("20250401163614_TestMigration6")]
+    partial class TestMigration6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

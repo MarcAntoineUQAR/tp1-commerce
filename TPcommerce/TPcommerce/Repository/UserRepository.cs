@@ -23,19 +23,23 @@ public class UserRepository
         
         return new GenericResponse<User>(user, "Logging fait avec succès", true);
     }
-    
+
     public GenericResponse<User> AddUser(RegisterViewModel creditentials)
     {
-        if(creditentials.Password != creditentials.ConfirmPassword)
-            return new GenericResponse<User>("Mot de passe de concorde pas", false);
-        
+        if (creditentials.Password != creditentials.ConfirmPassword)
+            return new GenericResponse<User>("Mot de passe ne concorde pas", false);
+
         TpcommerceContext context = new TpcommerceContext();
-        var user = new User()
+
+        var cart = new ShoppingCart();
+        var user = new User
         {
             Username = creditentials.Username,
             Password = creditentials.Password,
             Role = creditentials.Role,
+            ShoppingCart = cart
         };
+        cart.Owner = user;
 
         try
         {
@@ -44,18 +48,36 @@ public class UserRepository
         }
         catch (Exception e)
         {
-            return new GenericResponse<User>("Erreur inattendu: " + e, false);
+            return new GenericResponse<User>("Erreur inattendue: " + e, false);
         }
 
         return new GenericResponse<User>("Utilisateur ajouté", true);
     }
 
+
     public User ShowUserDetails(int userId)
     {
         TpcommerceContext context = new TpcommerceContext();
-        User user = context.Users.Include(u => u.ShoppingCart).FirstOrDefault(u => u.Id == userId);
-        return user;
+
+        var user = context.Users
+            .Include(u => u.ShoppingCart)
+            .ThenInclude(sc => sc.ShoppingCartItems)
+            .FirstOrDefault(u => u.Id == userId);
+
+        if (user != null && user.ShoppingCart == null)
+        {
+            var cart = new ShoppingCart { Owner = user };
+            context.ShoppingCarts.Add(cart);
+            context.SaveChanges();
+
+            user = context.Users
+                .Include(u => u.ShoppingCart)
+                .FirstOrDefault(u => u.Id == userId);
+        }
+
+        return user!;
     }
+
 
     public GenericResponse<User> UpdateUser(int id, User user)
     {

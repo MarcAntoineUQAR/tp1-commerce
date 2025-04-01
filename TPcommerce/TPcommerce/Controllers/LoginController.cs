@@ -27,10 +27,12 @@ public class LoginController : Controller
         if (result.Success)
         {
             HttpContext.Session.SetInt32("UserId", result.Data.Id);
+            HttpContext.Session.SetString("Role", result.Data.Role);
             return RedirectToAction("Index", "Home");
         }
         return RedirectToAction("Login");
     }
+
 
     [HttpGet("logout")]
     public IActionResult Logout()

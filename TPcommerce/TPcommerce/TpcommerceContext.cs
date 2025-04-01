@@ -13,6 +13,8 @@ namespace TPcommerce
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<PaymentInfos> PaymentInfos { get; set; }
         public DbSet<Bill> Bills { get; set; }
+        public DbSet<BillItem> BillItems { get; set; }
+
         string connectionString = "server=localhost;port=8080;database=tpcommerce;user=root;password=admin123*;";
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -22,6 +24,9 @@ namespace TPcommerce
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BillItem>().ToTable("BillItem");
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<User>()
                 .HasOne(u => u.ShoppingCart)
                 .WithOne(s => s.Owner)
