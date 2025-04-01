@@ -30,10 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcNDA0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simon/OneDrive/Desktop/tp2/tp1-commerce/TPcommerce/TPcommerce/Views/DisplayBill.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcGxheUJpbGwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/simon/OneDrive/Desktop/tp2/tp1-commerce/TPcommerce/TPcommerce/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/simon/OneDrive/Desktop/tp2/tp1-commerce/TPcommerce/TPcommerce/Views/Products/SpecificProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcU3BlY2lmaWNQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon/OneDrive/Desktop/tp2/tp1-commerce/TPcommerce/TPcommerce/Views/Sales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/simon/OneDrive/Desktop/tp2/tp1-commerce/TPcommerce/TPcommerce/Views/Shared/_OuterLayout.cshtml]

@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using TPcommerce.Models.DTO;
 
 namespace TPcommerce.Models;
 
@@ -21,6 +22,8 @@ public class Product
     }
     
     public string Category { get; set; }
+    public int? SellerId { get; set; }
+    public User Seller { get; set; }
 }
 
 public class ProductResponse

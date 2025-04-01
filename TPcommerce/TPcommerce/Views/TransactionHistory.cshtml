@@ -4,11 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container mt-4">
-    <h2 class="text-center mb-4 text-warning fw-bold">🧾 Historique des Transactions</h2>
+    <h2 class="text-center mb-4 text-warning fw-bold">Mes achats</h2>
 
     @if (!Model.Any())
     {
-        <p>Vous n'avez encore effectué aucun achat.</p>
+        <h3 class="text-center">Vous n'avez encore effectué aucun achat</h3>
     }
     else
     {

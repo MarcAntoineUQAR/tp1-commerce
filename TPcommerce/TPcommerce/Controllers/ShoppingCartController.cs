@@ -20,21 +20,26 @@ public class ShoppingCartController : Controller
     public IActionResult Index()
     {
         var user = GetUser();
-        var shoppingCart = _shoppingCartRepository.GetShoppingCart(user.Id);
-        decimal totalPrice = shoppingCart.Data.ShoppingCartItems
-            .Select(p => p.Product.Price * p.Quantity).Sum();
-        shoppingCart.Data.TotalPrice = totalPrice;
-        
-        if (shoppingCart.Success)
+        if (user.ShoppingCart == null)
         {
-            return View("../shoppingcart",shoppingCart.Data);
+            TempData["message"] = "Aucun panier trouvé pour l'utilisateur.";
+            return RedirectToAction("Index", "Home");
         }
-        else
+
+        var shoppingCart = _shoppingCartRepository.GetShoppingCart(user.Id);
+        if (!shoppingCart.Success || shoppingCart.Data == null)
         {
             TempData["message"] = shoppingCart.Message;
             return RedirectToAction("Index", "Home");
         }
+
+        decimal totalPrice = shoppingCart.Data.ShoppingCartItems
+            .Select(p => p.Product.Price * p.Quantity).Sum();
+        shoppingCart.Data.TotalPrice = totalPrice;
+
+        return View("../shoppingcart", shoppingCart.Data);
     }
+
 
     [HttpPost("shoppingcart/add")]
     public IActionResult AddProductToShoppingCart(int productId, int quantity)
@@ -45,10 +50,25 @@ public class ShoppingCartController : Controller
             TempData["message"] = "Veuillez vous connecter avant d'ajouter au panier.";
             return RedirectToAction("Login", "Login");
         }
+
+        if (user.Role == "seller")
+        {
+            TempData["message"] = "Un vendeur ne peut pas acheter de produits.";
+            return RedirectToAction("Index", "Products");
+        }
+
+        if (user.ShoppingCart == null)
+        {
+            TempData["message"] = "Aucun panier n'a été trouvé pour cet utilisateur.";
+            return RedirectToAction("Index", "Home");
+        }
+
         var results = _shoppingCartRepository.AddProductToShoppingCart(user.ShoppingCart.Id, productId, quantity);
         TempData["message"] = results.Message;
         return RedirectToAction("Index", "Products");
     }
+
+
 
     [HttpPost("shoppingcart/remove")]
     public IActionResult RemoveProductFromShoppingCart(int productId)
