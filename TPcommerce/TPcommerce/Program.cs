@@ -28,7 +28,7 @@ StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
 var app = builder.Build();
 
-// Supprime l'historique d'achat + infos de paiement pour testing
+// Supprime l'historique d'achat + infos de paiement pour tests
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<TpcommerceContext>();
@@ -47,7 +47,7 @@ using (var scope = app.Services.CreateScope())
             context.Remove(bill.PaymentInfos);
     }
 
-    // Supprimer les factures
+    // Supprime les factures
     context.Bills.RemoveRange(allBills);
     context.SaveChanges();
 

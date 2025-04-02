@@ -24,7 +24,6 @@ namespace TPcommerce.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            // Get current user ID from session
             var userId = HttpContext.Session.GetInt32("UserId");
             if (userId == null)
             {
@@ -32,7 +31,6 @@ namespace TPcommerce.Controllers
                 return RedirectToAction("Login", "User");
             }
 
-            // Retrieve the shopping cart using the repository
             var shoppingCartResponse = _shoppingCartRepository.GetShoppingCart(userId.Value);
             if (!shoppingCartResponse.Success)
             {
@@ -41,17 +39,12 @@ namespace TPcommerce.Controllers
             }
 
             var shoppingCart = shoppingCartResponse.Data;
-            // Calculate total price if needed
             shoppingCart.TotalPrice = shoppingCart.ShoppingCartItems
                 .Select(item => item.Product.Price * item.Quantity)
                 .Sum();
 
-            // Option 1: Use the ShoppingCart model as your view model.
             ViewBag.StripePublishableKey = _stripeSettings.PublishableKey;
             return View("../Payment/Payment", shoppingCart);
-
-            // Option 2: If you want a custom PaymentViewModel, create one that contains both the shopping cart summary
-            // and any other payment details.
         }
 
 

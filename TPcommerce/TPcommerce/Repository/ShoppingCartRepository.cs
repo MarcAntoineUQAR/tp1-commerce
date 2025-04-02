@@ -8,14 +8,12 @@ public class ShoppingCartRepository
     private readonly UserRepository _userRepository;
     private readonly ProductRepository _productRepository;
     private TpcommerceContext context = new TpcommerceContext();
-
     
     public ShoppingCartRepository(UserRepository userRepository, ProductRepository productRepository)
     {
         _userRepository = userRepository;
         _productRepository = productRepository;
     }
-
 
     public GenericResponse<ShoppingCart> GetShoppingCart(int userId)
     {

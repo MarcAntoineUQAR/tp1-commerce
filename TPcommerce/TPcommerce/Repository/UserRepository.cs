@@ -21,7 +21,7 @@ public class UserRepository
             return new GenericResponse<User>("Mot de passe incorrect", false);
         }
         
-        return new GenericResponse<User>(user, "Logging fait avec succès", true);
+        return new GenericResponse<User>(user, "Connexion faite avec succès", true);
     }
 
     public GenericResponse<User> AddUser(RegisterViewModel creditentials)
