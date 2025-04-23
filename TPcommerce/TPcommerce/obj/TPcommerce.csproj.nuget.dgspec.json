@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {}
+    "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {
+    "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+        "projectUniqueName": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
         "projectName": "TPcommerce",
-        "projectPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+        "projectPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
         "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\obj\\",
+        "outputPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\TPcommerce\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9LdBfVWVmIg=",
+  "dgSpecHash": "SHaGX2ibxqg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp2\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+  "projectFilePath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simon\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\simon\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
