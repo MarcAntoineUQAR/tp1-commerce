@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPcommerce", "TPcommerce\TPcommerce.csproj", "{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC-Gateway", "EC-Gateway\EC-Gateway.csproj", "{100A9330-4B56-45AE-8E21-B914A9FB43B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC-Gateway", "EC-Gateway\EC-Gateway.csproj", "{370A535E-02B3-4889-B6AF-C5274F635AEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F21DBC6-6767-450C-9E67-FCC33CB1FEA5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{100A9330-4B56-45AE-8E21-B914A9FB43B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{100A9330-4B56-45AE-8E21-B914A9FB43B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{100A9330-4B56-45AE-8E21-B914A9FB43B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{100A9330-4B56-45AE-8E21-B914A9FB43B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370A535E-02B3-4889-B6AF-C5274F635AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370A535E-02B3-4889-B6AF-C5274F635AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370A535E-02B3-4889-B6AF-C5274F635AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370A535E-02B3-4889-B6AF-C5274F635AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
