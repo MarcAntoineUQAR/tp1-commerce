@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Mysqlx.Crud;
 using TPcommerce.Models;
 using TPcommerce.Models.DTO;
 

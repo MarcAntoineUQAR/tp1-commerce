@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EC-Authentification")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5642d5432796787bf7923050acfbd019c792254")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb81937587b1cf8439a303092f1b7c3aa7cbea07")]
 [assembly: System.Reflection.AssemblyProductAttribute("EC-Authentification")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EC-Authentification")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
