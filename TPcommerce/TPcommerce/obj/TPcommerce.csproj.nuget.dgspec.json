@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce-reboot\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {}
+    "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce-reboot\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {
+    "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce-reboot\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+        "projectUniqueName": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
         "projectName": "TPcommerce",
-        "projectPath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce-reboot\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+        "projectPath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
         "packagesPath": "C:\\Users\\Maleb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce-reboot\\TPcommerce\\TPcommerce\\obj\\",
+        "outputPath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Maleb\\AppData\\Roaming\\NuGet\\NuGet.Config"
