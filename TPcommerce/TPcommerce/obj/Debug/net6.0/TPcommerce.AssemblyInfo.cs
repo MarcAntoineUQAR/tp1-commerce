@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPcommerce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cfb3ae66eb57c5b36752e6554751b6ea5d2a1aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d1334db3511567612fb35ea394e845b61b39faf")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPcommerce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPcommerce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

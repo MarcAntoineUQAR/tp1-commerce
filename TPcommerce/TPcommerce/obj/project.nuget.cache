@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bNhq8+gNGjA=",
+  "dgSpecHash": "Mr0OpHCiuD0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
+  "projectFilePath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce-reboot\\TPcommerce\\TPcommerce\\TPcommerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maleb\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Maleb\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
