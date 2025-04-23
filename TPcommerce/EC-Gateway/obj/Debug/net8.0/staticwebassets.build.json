@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "TGFb+2hyD0bf48nrBx9TRzIar7GPScIW8p4Q+wtzhTM=",
+  "Source": "EC-Gateway",
+  "BasePath": "_content/EC-Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,9 +1,21 @@
+using MMLib.SwaggerForOcelot.DependencyInjection;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var routes = "Routes";
+builder.Configuration.AddOcelotWithSwaggerSupport(options =>
+{
+    options.Folder = routes;
+});
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerForOcelot(builder.Configuration);
+builder.Services.AddOcelot(builder.Configuration);
 
 var app = builder.Build();
 
@@ -15,6 +27,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseSwaggerForOcelotUI(options =>
+{
+    options.PathToSwaggerGenerator = "/swagger/docs";
+});
+app.UseOcelot().Wait();
 
 var summaries = new[]
 {
