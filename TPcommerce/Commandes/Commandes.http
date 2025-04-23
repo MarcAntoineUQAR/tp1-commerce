@@ -1,6 +1,0 @@
-@Commandes_HostAddress = http://localhost:5236
-
-GET {{Commandes_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
