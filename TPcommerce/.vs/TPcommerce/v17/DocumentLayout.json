@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\routes\\ocelot.authentification.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.authentification.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\routes\\ocelot.global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\routes\\ocelot.carts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.carts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\ec-gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\ec-gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABC2328C-A08B-4ADA-9B9C-8C0422542520}|EC-Products\\EC-Products.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-products\\ec-products.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ABC2328C-A08B-4ADA-9B9C-8C0422542520}|EC-Products\\EC-Products.csproj|solutionrelative:ec-products\\ec-products.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{271FD5EA-4D42-401C-A87F-408308F44E81}|EC-Payments\\EC-Payments.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-payments\\ec-payments.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{271FD5EA-4D42-401C-A87F-408308F44E81}|EC-Payments\\EC-Payments.csproj|solutionrelative:ec-payments\\ec-payments.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C9678D1-AC1C-4612-89DF-D36E2650B0F4}|EC-Orders\\EC-Orders.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-orders\\ec-orders.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6C9678D1-AC1C-4612-89DF-D36E2650B0F4}|EC-Orders\\EC-Orders.csproj|solutionrelative:ec-orders\\ec-orders.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\routes\\ocelot.products.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.products.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -23,24 +51,8 @@
       "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.orders.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\routes\\ocelot.global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\routes\\ocelot.carts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.carts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\routes\\ocelot.authentification.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\routes\\ocelot.authentification.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-gateway\\ec-gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{370A535E-02B3-4889-B6AF-C5274F635AEB}|EC-Gateway\\EC-Gateway.csproj|solutionrelative:ec-gateway\\ec-gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF09B3A0-7FA9-4AC6-A288-29FD31893D0D}|EC-Users\\EC-Users.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-users\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -55,24 +67,12 @@
       "RelativeMoniker": "D:0:0:{ABC2328C-A08B-4ADA-9B9C-8C0422542520}|EC-Products\\EC-Products.csproj|solutionrelative:ec-products\\ec-products.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABC2328C-A08B-4ADA-9B9C-8C0422542520}|EC-Products\\EC-Products.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-products\\ec-products.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{ABC2328C-A08B-4ADA-9B9C-8C0422542520}|EC-Products\\EC-Products.csproj|solutionrelative:ec-products\\ec-products.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{271FD5EA-4D42-401C-A87F-408308F44E81}|EC-Payments\\EC-Payments.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-payments\\ec-payments.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{271FD5EA-4D42-401C-A87F-408308F44E81}|EC-Payments\\EC-Payments.csproj|solutionrelative:ec-payments\\ec-payments.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{271FD5EA-4D42-401C-A87F-408308F44E81}|EC-Payments\\EC-Payments.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-payments\\ec-payments.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{271FD5EA-4D42-401C-A87F-408308F44E81}|EC-Payments\\EC-Payments.csproj|solutionrelative:ec-payments\\ec-payments.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C9678D1-AC1C-4612-89DF-D36E2650B0F4}|EC-Orders\\EC-Orders.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-orders\\ec-orders.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{6C9678D1-AC1C-4612-89DF-D36E2650B0F4}|EC-Orders\\EC-Orders.csproj|solutionrelative:ec-orders\\ec-orders.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C9678D1-AC1C-4612-89DF-D36E2650B0F4}|EC-Orders\\EC-Orders.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-orders\\ec-orders.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6C9678D1-AC1C-4612-89DF-D36E2650B0F4}|EC-Orders\\EC-Orders.csproj|solutionrelative:ec-orders\\ec-orders.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{042E0F0F-52BB-4587-B453-34158E4B0455}|EC-Carts\\EC-Carts.csproj|c:\\users\\simon\\onedrive\\desktop\\tp1-commerce\\tpcommerce\\ec-carts\\ec-carts.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -106,17 +106,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "ocelot.products.json",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.products.json",
               "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.products.json",
               "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.products.json",
               "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.products.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-04-23T19:41:29.443Z",
               "EditorCaption": ""
@@ -124,58 +124,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ocelot.SwaggerEndPoints.json",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
-              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
-              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-23T18:55:49.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ocelot.users.json",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.users.json",
-              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.users.json",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.users.json",
-              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.users.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-23T19:36:04.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ocelot.payments.json",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.payments.json",
-              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.payments.json",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.payments.json",
-              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.payments.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-23T19:40:44.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ocelot.orders.json",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.orders.json",
-              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.orders.json",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.orders.json",
-              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.orders.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-23T19:40:21.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "ocelot.global.json",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.global.json",
               "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.global.json",
@@ -188,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "ocelot.carts.json",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.carts.json",
               "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.carts.json",
@@ -201,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "ocelot.authentification.json",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.authentification.json",
               "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.authentification.json",
@@ -214,68 +162,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Program.cs",
-              "RelativeDocumentMoniker": "EC-Gateway\\Program.cs",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Program.cs",
-              "RelativeToolTip": "EC-Gateway\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T18:53:47.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EC-Carts",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Carts\\EC-Carts.csproj",
-              "RelativeDocumentMoniker": "EC-Carts\\EC-Carts.csproj",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Carts\\EC-Carts.csproj",
-              "RelativeToolTip": "EC-Carts\\EC-Carts.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:19:05.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EC-Orders",
+              "DocumentIndex": 6,
+              "Title": "EC-Orders.csproj",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Orders\\EC-Orders.csproj",
               "RelativeDocumentMoniker": "EC-Orders\\EC-Orders.csproj",
               "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Orders\\EC-Orders.csproj",
               "RelativeToolTip": "EC-Orders\\EC-Orders.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:19:29.749Z",
+              "WhenOpened": "2025-04-23T19:09:53.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EC-Payments",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Payments\\EC-Payments.csproj",
-              "RelativeDocumentMoniker": "EC-Payments\\EC-Payments.csproj",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Payments\\EC-Payments.csproj",
-              "RelativeToolTip": "EC-Payments\\EC-Payments.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:19:43.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "EC-Authentification",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
-              "RelativeDocumentMoniker": "EC-Authentification\\EC-Authentification.csproj",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
-              "RelativeToolTip": "EC-Authentification\\EC-Authentification.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:18:49.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "EC-Gateway.csproj",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\EC-Gateway.csproj",
               "RelativeDocumentMoniker": "EC-Gateway\\EC-Gateway.csproj",
@@ -288,70 +188,8 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EC-Products",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
-              "RelativeDocumentMoniker": "EC-Products\\EC-Products.csproj",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
-              "RelativeToolTip": "EC-Products\\EC-Products.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:20:00.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EC-Users",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\EC-Users.csproj",
-              "RelativeDocumentMoniker": "EC-Users\\EC-Users.csproj",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\EC-Users.csproj",
-              "RelativeToolTip": "EC-Users\\EC-Users.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:20:21.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\appsettings.json",
-              "RelativeDocumentMoniker": "EC-Users\\appsettings.json",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\appsettings.json",
-              "RelativeToolTip": "EC-Users\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-23T19:32:57.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "EC-Gateway",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\EC-Gateway.csproj",
-              "RelativeDocumentMoniker": "EC-Gateway\\EC-Gateway.csproj",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\EC-Gateway.csproj",
-              "RelativeToolTip": "EC-Gateway\\EC-Gateway.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:17:57.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EC-Products",
-              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
-              "RelativeDocumentMoniker": "EC-Products\\EC-Products.csproj",
-              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
-              "RelativeToolTip": "EC-Products\\EC-Products.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:10:06.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EC-Payments",
+              "DocumentIndex": 5,
+              "Title": "EC-Payments.csproj",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Payments\\EC-Payments.csproj",
               "RelativeDocumentMoniker": "EC-Payments\\EC-Payments.csproj",
               "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Payments\\EC-Payments.csproj",
@@ -363,55 +201,201 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EC-Products.csproj",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
+              "RelativeDocumentMoniker": "EC-Products\\EC-Products.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
+              "RelativeToolTip": "EC-Products\\EC-Products.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T19:10:06.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ocelot.orders.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.orders.json",
+              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.orders.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.orders.json",
+              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.orders.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-23T19:40:21.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ocelot.payments.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.payments.json",
+              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.payments.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.payments.json",
+              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.payments.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-23T19:40:44.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ocelot.users.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.users.json",
+              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.users.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.users.json",
+              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.users.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-23T19:36:04.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ocelot.SwaggerEndPoints.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
+              "RelativeDocumentMoniker": "EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
+              "RelativeToolTip": "EC-Gateway\\Routes\\ocelot.SwaggerEndPoints.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-23T18:55:49.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Program.cs",
+              "RelativeDocumentMoniker": "EC-Gateway\\Program.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\Program.cs",
+              "RelativeToolTip": "EC-Gateway\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:53:47.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EC-Carts",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Carts\\EC-Carts.csproj",
+              "RelativeDocumentMoniker": "EC-Carts\\EC-Carts.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Carts\\EC-Carts.csproj",
+              "RelativeToolTip": "EC-Carts\\EC-Carts.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T19:19:05.687Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 17,
               "Title": "EC-Orders",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Orders\\EC-Orders.csproj",
               "RelativeDocumentMoniker": "EC-Orders\\EC-Orders.csproj",
               "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Orders\\EC-Orders.csproj",
               "RelativeToolTip": "EC-Orders\\EC-Orders.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:09:53.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T19:19:29.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EC-Payments",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Payments\\EC-Payments.csproj",
+              "RelativeDocumentMoniker": "EC-Payments\\EC-Payments.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Payments\\EC-Payments.csproj",
+              "RelativeToolTip": "EC-Payments\\EC-Payments.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T19:19:43.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EC-Authentification",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
+              "RelativeDocumentMoniker": "EC-Authentification\\EC-Authentification.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
+              "RelativeToolTip": "EC-Authentification\\EC-Authentification.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T19:18:49.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EC-Products",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
+              "RelativeDocumentMoniker": "EC-Products\\EC-Products.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Products\\EC-Products.csproj",
+              "RelativeToolTip": "EC-Products\\EC-Products.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T19:20:00.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EC-Users",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\EC-Users.csproj",
+              "RelativeDocumentMoniker": "EC-Users\\EC-Users.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\EC-Users.csproj",
+              "RelativeToolTip": "EC-Users\\EC-Users.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T19:20:21.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\appsettings.json",
+              "RelativeDocumentMoniker": "EC-Users\\appsettings.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\appsettings.json",
+              "RelativeToolTip": "EC-Users\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-23T19:32:57.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EC-Gateway",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\EC-Gateway.csproj",
+              "RelativeDocumentMoniker": "EC-Gateway\\EC-Gateway.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Gateway\\EC-Gateway.csproj",
+              "RelativeToolTip": "EC-Gateway\\EC-Gateway.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T19:17:57.614Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "EC-Users",
+              "Title": "EC-Users.csproj",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\EC-Users.csproj",
               "RelativeDocumentMoniker": "EC-Users\\EC-Users.csproj",
               "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Users\\EC-Users.csproj",
               "RelativeToolTip": "EC-Users\\EC-Users.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:09:26.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T19:09:26.359Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "EC-Carts",
+              "Title": "EC-Carts.csproj",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Carts\\EC-Carts.csproj",
               "RelativeDocumentMoniker": "EC-Carts\\EC-Carts.csproj",
               "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Carts\\EC-Carts.csproj",
               "RelativeToolTip": "EC-Carts\\EC-Carts.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:09:43.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T19:09:43.219Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "EC-Authentification",
+              "Title": "EC-Authentification.csproj",
               "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
               "RelativeDocumentMoniker": "EC-Authentification\\EC-Authentification.csproj",
               "ToolTip": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
               "RelativeToolTip": "EC-Authentification\\EC-Authentification.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-23T19:09:30.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T19:09:30.753Z"
             }
           ]
         }
