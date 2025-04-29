@@ -17,16 +17,17 @@ public class TransactionHistoryController : Controller
     [HttpGet]
     public IActionResult Index()
     {
-        var userId = HttpContext.Session.GetInt32("UserId");
-        if (userId == null)
-        {
-            TempData["message"] = "Veuillez vous connecter.";
-            return RedirectToAction("Login", "User");
-        }
-
-        var user = _userRepository.ShowUserDetails(userId.Value);
-        var bills = _billRepository.GetBillsByUserId(user.Id);
-
-        return View("~/Views/TransactionHistory.cshtml", bills);
+        // var userId = HttpContext.Session.GetInt32("UserId");
+        // if (userId == null)
+        // {
+        //     TempData["message"] = "Veuillez vous connecter.";
+        //     return RedirectToAction("Login", "User");
+        // }
+        //
+        // var user = _userRepository.ShowUserDetails(userId.Value);
+        // var bills = _billRepository.GetBillsByUserId(user.Id);
+        //
+        // return View("~/Views/TransactionHistory.cshtml", bills);
+        return new EmptyResult();
     }
 }

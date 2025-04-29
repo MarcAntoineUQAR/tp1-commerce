@@ -18,37 +18,41 @@ namespace TPcommerce.Controllers
         [HttpGet("user")]
         public IActionResult Index()
         {
-            var userId = HttpContext.Session.GetInt32("UserId");
-            if (userId == null)
-            {
-                TempData["message"] = "Êtes-vous bien connecté?";
-                return RedirectToAction("Login", "Login");
-            }
-            var user = _userRepository.ShowUserDetails(userId.Value);
-            
-            return View("../user/InfoUser", user);
+            // var userId = HttpContext.Session.GetInt32("UserId");
+            // if (userId == null)
+            // {
+            //     TempData["message"] = "Êtes-vous bien connecté?";
+            //     return RedirectToAction("Login", "Login");
+            // }
+            // var user = _userRepository.ShowUserDetails(userId.Value);
+            //
+            // return View("../user/InfoUser", user);
+            return new EmptyResult();
         }
 
         [HttpGet("user/update")]
         public IActionResult GetUpdateUser(User user)
         {
-            return View("../user/UpdateUser", user);
+            // return View("../user/UpdateUser", user);
+            return new EmptyResult();
         }
 
         [HttpPost("user/update")]
         public IActionResult UpdateUser([FromForm] User user)
         {
-            var result = _userRepository.UpdateUser(user.Id, user);
-            if (result.Success)
-            {
-                TempData["message"] = result.Message;
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                TempData["message"] = result.Message;
-                return RedirectToAction("Index");
-            }
+            // var result = _userRepository.UpdateUser(user.Id, user);
+            // if (result.Success)
+            // {
+            //     TempData["message"] = result.Message;
+            //     return RedirectToAction("Index");
+            // }
+            // else
+            // {
+            //     TempData["message"] = result.Message;
+            //     return RedirectToAction("Index");
+            // }
+            return new EmptyResult();
+
         }
     }
 }

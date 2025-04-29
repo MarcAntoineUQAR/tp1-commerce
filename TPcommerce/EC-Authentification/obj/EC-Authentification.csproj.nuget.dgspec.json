@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj": {}
+    "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj": {
+    "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
+        "projectUniqueName": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
         "projectName": "EC-Authentification",
-        "projectPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
-        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simon\\OneDrive\\Desktop\\tp1-commerce\\TPcommerce\\EC-Authentification\\obj\\",
+        "projectPath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\EC-Authentification\\EC-Authentification.csproj",
+        "packagesPath": "C:\\Users\\Maleb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maleb\\RiderProjects\\tp1-commerce\\TPcommerce\\EC-Authentification\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Maleb\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -74,6 +67,10 @@
               "target": "Package",
               "version": "[24.0.0, )"
             },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.efcore.9.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[8.1.1, )"
@@ -98,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Maleb\\.dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

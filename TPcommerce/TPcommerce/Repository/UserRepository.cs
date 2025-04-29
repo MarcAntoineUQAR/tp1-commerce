@@ -9,101 +9,105 @@ public class UserRepository
 
     public GenericResponse<User> Login(LoginViewModel creditentials)
     {
-        TpcommerceContext context = new TpcommerceContext();
-        var user = context.Users.SingleOrDefault(u => u.Username == creditentials.Username);
-        if (user == null)
-        {
-            return new GenericResponse<User>("Utilisateur introuvable", false);
-        }
-
-        if (user.Password != creditentials.Password)
-        {
-            return new GenericResponse<User>("Mot de passe incorrect", false);
-        }
-        
-        return new GenericResponse<User>(user, "Connexion faite avec succès", true);
+        // TpcommerceContext context = new TpcommerceContext();
+        // var user = context.Users.SingleOrDefault(u => u.Username == creditentials.Username);
+        // if (user == null)
+        // {
+        //     return new GenericResponse<User>("Utilisateur introuvable", false);
+        // }
+        //
+        // if (user.Password != creditentials.Password)
+        // {
+        //     return new GenericResponse<User>("Mot de passe incorrect", false);
+        // }
+        //
+        // return new GenericResponse<User>(user, "Connexion faite avec succès", true);
+        return null;
     }
 
     public GenericResponse<User> AddUser(RegisterViewModel creditentials)
     {
-        if (creditentials.Password != creditentials.ConfirmPassword)
-            return new GenericResponse<User>("Mot de passe ne concorde pas", false);
-
-        TpcommerceContext context = new TpcommerceContext();
-
-        var cart = new ShoppingCart();
-        var user = new User
-        {
-            Username = creditentials.Username,
-            Password = creditentials.Password,
-            Role = creditentials.Role,
-            ShoppingCart = cart
-        };
-        cart.Owner = user;
-
-        try
-        {
-            context.Users.Add(user);
-            context.SaveChanges();
-        }
-        catch (Exception e)
-        {
-            return new GenericResponse<User>("Erreur inattendue: " + e, false);
-        }
-
-        return new GenericResponse<User>("Utilisateur ajouté", true);
+        // if (creditentials.Password != creditentials.ConfirmPassword)
+        //     return new GenericResponse<User>("Mot de passe ne concorde pas", false);
+        //
+        // TpcommerceContext context = new TpcommerceContext();
+        //
+        // var cart = new ShoppingCart();
+        // var user = new User
+        // {
+        //     Username = creditentials.Username,
+        //     Password = creditentials.Password,
+        //     Role = creditentials.Role,
+        //     ShoppingCart = cart
+        // };
+        // cart.Owner = user;
+        //
+        // try
+        // {
+        //     context.Users.Add(user);
+        //     context.SaveChanges();
+        // }
+        // catch (Exception e)
+        // {
+        //     return new GenericResponse<User>("Erreur inattendue: " + e, false);
+        // }
+        //
+        // return new GenericResponse<User>("Utilisateur ajouté", true);
+        return null;
     }
 
 
     public User ShowUserDetails(int userId)
     {
-        TpcommerceContext context = new TpcommerceContext();
-
-        var user = context.Users
-            .Include(u => u.ShoppingCart)
-            .ThenInclude(sc => sc.ShoppingCartItems)
-            .FirstOrDefault(u => u.Id == userId);
-
-        if (user != null && user.ShoppingCart == null)
-        {
-            var cart = new ShoppingCart { Owner = user };
-            context.ShoppingCarts.Add(cart);
-            context.SaveChanges();
-
-            user = context.Users
-                .Include(u => u.ShoppingCart)
-                .FirstOrDefault(u => u.Id == userId);
-        }
-
-        return user!;
+        // TpcommerceContext context = new TpcommerceContext();
+        //
+        // var user = context.Users
+        //     .Include(u => u.ShoppingCart)
+        //     .ThenInclude(sc => sc.ShoppingCartItems)
+        //     .FirstOrDefault(u => u.Id == userId);
+        //
+        // if (user != null && user.ShoppingCart == null)
+        // {
+        //     var cart = new ShoppingCart { Owner = user };
+        //     context.ShoppingCarts.Add(cart);
+        //     context.SaveChanges();
+        //
+        //     user = context.Users
+        //         .Include(u => u.ShoppingCart)
+        //         .FirstOrDefault(u => u.Id == userId);
+        // }
+        //
+        // return user!;
+        return null;
     }
 
 
     public GenericResponse<User> UpdateUser(int id, User user)
     {
-        using var context = new TpcommerceContext();
-    
-        var oldUser = context.Users.FirstOrDefault(u => u.Id == id);
-        if (oldUser == null)
-        {
-            return new GenericResponse<User>("Utilisateur introuvable", false);
-        }
-
-        oldUser.Username = user.Username;
-        oldUser.Password = user.Password;
-        oldUser.Role = user.Role;
-
-        try
-        {
-            context.Users.Update(oldUser);
-            context.SaveChanges();
-        }
-        catch (Exception e)
-        {
-            return new GenericResponse<User>("Erreur inattendue: " + e.Message, false);
-        }
-
-        return new GenericResponse<User>("Utilisateur modifié avec succès!", true);
+        // using var context = new TpcommerceContext();
+        //
+        // var oldUser = context.Users.FirstOrDefault(u => u.Id == id);
+        // if (oldUser == null)
+        // {
+        //     return new GenericResponse<User>("Utilisateur introuvable", false);
+        // }
+        //
+        // oldUser.Username = user.Username;
+        // oldUser.Password = user.Password;
+        // oldUser.Role = user.Role;
+        //
+        // try
+        // {
+        //     context.Users.Update(oldUser);
+        //     context.SaveChanges();
+        // }
+        // catch (Exception e)
+        // {
+        //     return new GenericResponse<User>("Erreur inattendue: " + e.Message, false);
+        // }
+        //
+        // return new GenericResponse<User>("Utilisateur modifié avec succès!", true);
+        return null;
     }
 
 }
