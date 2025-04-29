@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TPcommerce.Models;
 
 namespace TPcommerce.Repository;
@@ -14,12 +15,13 @@ public class BillRepository
 
     public List<Bill> GetBillsByUserId(int userId)
     {
-        return _context.Bills
-            .Where(b => b.OwnerId == userId.ToString())
-            .Include(b => b.Products)
-                .ThenInclude(p => p.Product)
-            .Include(b => b.PaymentInfos)
-            .OrderByDescending(b => b.Id)
-            .ToList();
+        // return _context.bill
+        //     .Where(b => b.OwnerId == userId.ToString())
+        //     .Include(b => b.Products)
+        //         .ThenInclude(p => p.Product)
+        //     .Include(b => b.PaymentInfos)
+        //     .OrderByDescending(b => b.Id)
+        //     .ToList();
+        return null;
     }
 }

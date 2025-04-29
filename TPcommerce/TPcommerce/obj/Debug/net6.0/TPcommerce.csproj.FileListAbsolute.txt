@@ -53,7 +53,6 @@ C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\scopedcss\bundle\TPcommerce.styles.css
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\scopedcss\projectbundle\TPcommerce.bundle.scp.css
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.csproj.CopyComplete
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\refint\TPcommerce.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.pdb
@@ -202,3 +201,11 @@ C:\Users\Maleb\RiderProjects\tp1-commerce-reboot\TPcommerce\TPcommerce\obj\Debug
 C:\Users\Maleb\RiderProjects\tp1-commerce-reboot\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.pdb
 C:\Users\Maleb\RiderProjects\tp1-commerce-reboot\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.genruntimeconfig.cache
 C:\Users\Maleb\RiderProjects\tp1-commerce-reboot\TPcommerce\TPcommerce\obj\Debug\net6.0\ref\TPcommerce.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Stripe.net.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.sourcelink.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets\msbuild.TPcommerce.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets\msbuild.build.TPcommerce.props
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TPcommerce.props
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TPcommerce.props
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.csproj.Up2Date
