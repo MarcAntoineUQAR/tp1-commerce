@@ -1,22 +1,51 @@
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.EntityFrameworkCore;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Stripe;
-using TPcommerce;
 using TPcommerce.Models;
 using TPcommerce.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<UserRepository>();
+
+// Stripe
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
-builder.Services.AddScoped<UserRepository>();
-builder.Services.AddScoped<BaseRepository>();
-builder.Services.AddScoped<ProductRepository>();
-builder.Services.AddScoped<ShoppingCartRepository>();
-builder.Services.AddScoped<BillRepository>();
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
-builder.Services.AddDbContext<TpcommerceContext>();
+builder.Services.AddHttpClient("EC-User", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:5001");
+});
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "ec-auth",
+            ValidAudience = "ec-api",
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("yvanistheabsolutegoatofprogrammation"))
+        };
+    });
+
+
+// Register HttpClient for Microservices
+builder.Services.AddHttpClient("EC-User", c => c.BaseAddress = new Uri("https://localhost:7001"));
+builder.Services.AddHttpClient("EC-Product", c => c.BaseAddress = new Uri("https://localhost:7002"));
+builder.Services.AddHttpClient("EC-ShoppingCart", c => c.BaseAddress = new Uri("https://localhost:7003"));
+builder.Services.AddHttpClient("EC-Bill", c => c.BaseAddress = new Uri("https://localhost:7004"));
+builder.Services.AddHttpClient("EC-Payment", c => c.BaseAddress = new Uri("https://localhost:7005"));
+builder.Services.AddHttpClient("EC-Authentification", c => c.BaseAddress = new Uri("https://localhost:7006"));
+
+// Session
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -24,36 +53,9 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
-
 var app = builder.Build();
 
-// Supprime l'historique d'achat + infos de paiement pour tests
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<TpcommerceContext>();
-
-    // Supprime les factures et infos de paiement
-    var allBills = context.Bills
-        .Include(b => b.Products)
-        .Include(b => b.PaymentInfos)
-        .ToList();
-
-    // Supprimer les items de facture
-    foreach (var bill in allBills)
-    {
-        context.RemoveRange(bill.Products);
-        if (bill.PaymentInfos != null)
-            context.Remove(bill.PaymentInfos);
-    }
-
-    // Supprime les factures
-    context.Bills.RemoveRange(allBills);
-    context.SaveChanges();
-
-}
-
-// Configure the HTTP request pipeline.
+// Middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -63,21 +65,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.Use(async (context, next) =>
-{
-    if (context.Request.Path == "/")
-    {
-        context.Response.Redirect("/Home/FirstConnection");
-        return;
-    }
-    await next();
-});
-
 app.UseRouting();
-
 app.UseSession();
-
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",

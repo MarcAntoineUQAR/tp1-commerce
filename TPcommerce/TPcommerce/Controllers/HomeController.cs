@@ -7,12 +7,9 @@ namespace TPcommerce.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly BaseRepository _repository;
 
-    public HomeController(ILogger<HomeController> logger, BaseRepository repository)
+    public HomeController()
     {
-        _repository = repository;
-        _logger = logger;
     }
 
     public IActionResult Index()
@@ -24,7 +21,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult FirstConnection()
     {
-        _repository.PopulateDbContext();
-        return RedirectToAction("Login", "Login");
+        // _repository.PopulateDbContext();
+        return RedirectToAction("Index", "Login");
     }
 }

@@ -19,6 +19,7 @@
       </PackageReference>
       <PackageReference Include="MMLib.SwaggerForOcelot" Version="9.0.0" />
       <PackageReference Include="Ocelot" Version="24.0.0" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.3.efcore.9.0.0" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
     </ItemGroup>
 
