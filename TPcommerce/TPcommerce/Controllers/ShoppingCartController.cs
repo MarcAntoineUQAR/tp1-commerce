@@ -91,11 +91,4 @@ public class ShoppingCartController : Controller
         // return RedirectToAction("Index");
         return new EmptyResult();
     }
-    
-    private User GetUser()
-    {
-        var userId = HttpContext.Session.GetInt32("UserId");
-        var user = _userRepository.ShowUserDetails(userId.Value);
-        return user;
-    }
 }

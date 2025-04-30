@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EC-Orders")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9b832165f0c74dc2f1745d10263d90dfad7c2db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b954d3b3b9b0d9feda756ac4debe88aae93f6126")]
 [assembly: System.Reflection.AssemblyProductAttribute("EC-Orders")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EC-Orders")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

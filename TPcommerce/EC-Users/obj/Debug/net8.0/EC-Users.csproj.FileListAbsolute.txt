@@ -406,3 +406,4 @@ C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Users\obj\Debug\net8.0\r
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Users\obj\Debug\net8.0\EC-Users.pdb
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Users\obj\Debug\net8.0\EC-Users.genruntimeconfig.cache
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Users\obj\Debug\net8.0\ref\EC-Users.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Users\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

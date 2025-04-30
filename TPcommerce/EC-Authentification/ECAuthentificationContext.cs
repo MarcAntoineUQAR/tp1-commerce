@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EC_Authentification;
 
-public class ECAuthentificationContext : DbContext
+public class EcAuthentificationContext : DbContext
 {
-    public DbSet<Authentification> Product { get; set; }
+    public DbSet<LoginRequest> Authentifications { get; set; }
 
     string connectionString = "server=localhost;port=8080;database=dbauthentification;user=root;password=admin123*;";
 

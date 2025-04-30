@@ -23,6 +23,7 @@ public class ProductController(ECProductsContext context) : ControllerBase
             return StatusCode(500, "Internal server error: " + ex.Message);
         }
     }
+    
 
     // Get product by ID
     [HttpGet("{id}")]

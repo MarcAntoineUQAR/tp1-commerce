@@ -1,4 +1,5 @@
-using Microsoft.EntityFrameworkCore;
+using System.Net.Http.Headers;
+using System.Text.Json;
 using TPcommerce.Models;
 using TPcommerce.Models.DTO;
 
@@ -6,23 +7,13 @@ namespace TPcommerce.Repository;
 
 public class UserRepository
 {
+    private readonly HttpClient _httpClient;
+    private JsonSerializerOptions _jsonSerializerOptions;
 
-    public GenericResponse<User> Login(LoginViewModel creditentials)
+    public UserRepository(HttpClient httpClient)
     {
-        // TpcommerceContext context = new TpcommerceContext();
-        // var user = context.Users.SingleOrDefault(u => u.Username == creditentials.Username);
-        // if (user == null)
-        // {
-        //     return new GenericResponse<User>("Utilisateur introuvable", false);
-        // }
-        //
-        // if (user.Password != creditentials.Password)
-        // {
-        //     return new GenericResponse<User>("Mot de passe incorrect", false);
-        // }
-        //
-        // return new GenericResponse<User>(user, "Connexion faite avec succès", true);
-        return null;
+        _httpClient = httpClient;
+        _jsonSerializerOptions = new JsonSerializerOptions(); // configure si besoin
     }
 
     public GenericResponse<User> AddUser(RegisterViewModel creditentials)
@@ -57,28 +48,17 @@ public class UserRepository
     }
 
 
-    public User ShowUserDetails(int userId)
+    public async Task<User> ShowUserDetails(int userId, string token)
     {
-        // TpcommerceContext context = new TpcommerceContext();
-        //
-        // var user = context.Users
-        //     .Include(u => u.ShoppingCart)
-        //     .ThenInclude(sc => sc.ShoppingCartItems)
-        //     .FirstOrDefault(u => u.Id == userId);
-        //
-        // if (user != null && user.ShoppingCart == null)
-        // {
-        //     var cart = new ShoppingCart { Owner = user };
-        //     context.ShoppingCarts.Add(cart);
-        //     context.SaveChanges();
-        //
-        //     user = context.Users
-        //         .Include(u => u.ShoppingCart)
-        //         .FirstOrDefault(u => u.Id == userId);
-        // }
-        //
-        // return user!;
-        return null;
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var response = await _httpClient.GetAsync($"http://localhost:5001/Users/{userId}");
+
+        if (!response.IsSuccessStatusCode)
+            throw new Exception("Impossible de récupérer l'utilisateur.");
+
+        var user = await response.Content.ReadFromJsonAsync<User>();
+        return user!;
     }
 
 
@@ -109,5 +89,4 @@ public class UserRepository
         // return new GenericResponse<User>("Utilisateur modifié avec succès!", true);
         return null;
     }
-
 }

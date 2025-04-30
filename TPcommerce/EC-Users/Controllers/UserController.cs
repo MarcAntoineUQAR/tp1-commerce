@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 namespace EC_Users.Controllers
@@ -6,6 +8,19 @@ namespace EC_Users.Controllers
     [Route("[controller]")]
     public class UsersController(EcUsersContext context) : ControllerBase
     {
+        
+        [HttpPost("validate")]
+        public IActionResult ValidateUser(LoginRequest dto)
+        {
+            var user = context.Users.SingleOrDefault(u => u.Username == dto.Username);
+
+            if (user == null || user.Password != dto.Password)
+                return Unauthorized();
+
+            return Ok(user.Id);
+        }
+
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -21,6 +36,7 @@ namespace EC_Users.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateUser(User user)
         {
             try
@@ -46,6 +62,7 @@ namespace EC_Users.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetUserById(int id)
         {
             try
@@ -65,6 +82,7 @@ namespace EC_Users.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateUser(int id, User user)
         {
             try
@@ -95,6 +113,7 @@ namespace EC_Users.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteUser(int id)
         {
             try

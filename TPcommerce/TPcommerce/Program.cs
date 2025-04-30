@@ -1,13 +1,41 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Stripe;
 using TPcommerce.Models;
+using TPcommerce.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<UserRepository>();
 
 // Stripe
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
+builder.Services.AddHttpClient("EC-User", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:5001");
+});
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "ec-auth",
+            ValidAudience = "ec-api",
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("yvanistheabsolutegoatofprogrammation"))
+        };
+    });
+
 
 // Register HttpClient for Microservices
 builder.Services.AddHttpClient("EC-User", c => c.BaseAddress = new Uri("https://localhost:7001"));
@@ -39,7 +67,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",

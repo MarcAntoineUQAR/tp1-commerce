@@ -209,3 +209,11 @@ C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TPcommerce.props
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\obj\Debug\net6.0\TPcommerce.csproj.Up2Date
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\TPcommerce\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
