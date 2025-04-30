@@ -1,3 +1,4 @@
+using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Mvc;
 using TPcommerce.Models;
 using TPcommerce.Models.DTO;
@@ -9,36 +10,55 @@ public class ShoppingCartController : Controller
 {
     private readonly UserRepository _userRepository;
     private readonly ShoppingCartRepository _shoppingCartRepository;
+    private readonly ProductRepository _productRepository;
 
-    public ShoppingCartController(UserRepository userRepository, ShoppingCartRepository shoppingCartRepository)
+    public ShoppingCartController(UserRepository userRepository, ShoppingCartRepository shoppingCartRepository, ProductRepository productRepository)
     {
         _userRepository = userRepository;
         _shoppingCartRepository = shoppingCartRepository;
+        _productRepository = productRepository;
     }
 
     [HttpGet("shoppingcart")]
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        // var user = GetUser();
-        // if (user.ShoppingCart == null)
-        // {
-        //     TempData["message"] = "Aucun panier trouv� pour l'utilisateur.";
-        //     return RedirectToAction("Index", "Home");
-        // }
-        //
-        // var shoppingCart = _shoppingCartRepository.GetShoppingCart(user.Id);
-        // if (!shoppingCart.Success || shoppingCart.Data == null)
-        // {
-        //     TempData["message"] = shoppingCart.Message;
-        //     return RedirectToAction("Index", "Home");
-        // }
-        //
-        // decimal totalPrice = shoppingCart.Data.ShoppingCartItems
-        //     .Select(p => p.Product.Price * p.Quantity).Sum();
-        // shoppingCart.Data.TotalPrice = totalPrice;
-        //
-        // return View("../shoppingcart", shoppingCart.Data);
-        return new EmptyResult();
+        var token = HttpContext.Session.GetString("JWT");
+        if (token == null)
+        {
+            TempData["message"] = "Veuillez vous connecter.";
+            return RedirectToAction("Index", "User");
+        }
+            
+        var handler = new JwtSecurityTokenHandler();
+        var jwt = handler.ReadJwtToken(token);
+        var userId = jwt.Claims.FirstOrDefault(c => c.Type == "id")?.Value;
+        var shoppingCartResponse = _shoppingCartRepository.GetShoppingCart(Convert.ToInt32(userId)).Result;
+        
+        if (shoppingCartResponse == null)
+        {
+            TempData["message"] = "Aucun panier trouv� pour l'utilisateur.";
+            return RedirectToAction("Index", "Home");
+        }
+        
+        if (shoppingCartResponse.Success && shoppingCartResponse.Data == null)
+        {
+            TempData["message"] = shoppingCartResponse.Message;
+            return RedirectToAction("Index", "Home");
+        }
+
+
+        foreach (var shoppingCartItem in shoppingCartResponse.Data.ShoppingCartItems)
+        {
+            var product = await _productRepository.GetSingleProduct(shoppingCartItem.ProductId);
+            shoppingCartItem.Product = product.Data;
+        }
+        
+        
+        decimal totalPrice = shoppingCartResponse.Data.ShoppingCartItems
+            .Select(p => p.Product.Price * p.Quantity).Sum();
+        shoppingCartResponse.Data.TotalPrice = totalPrice;
+        
+        return View("../shoppingcart", shoppingCartResponse.Data);
     }
 
 

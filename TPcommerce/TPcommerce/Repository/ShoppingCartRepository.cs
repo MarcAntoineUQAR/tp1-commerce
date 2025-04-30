@@ -8,35 +8,20 @@ public class ShoppingCartRepository
     private readonly UserRepository _userRepository;
     private readonly ProductRepository _productRepository;
     private TpcommerceContext context = new TpcommerceContext();
+    private HttpClient client = new HttpClient();
     
-    public ShoppingCartRepository(UserRepository userRepository, ProductRepository productRepository)
+    public ShoppingCartRepository(HttpClient httpClient, UserRepository userRepository, ProductRepository productRepository)
     {
         _userRepository = userRepository;
         _productRepository = productRepository;
+        client = httpClient;
     }
 
-    public GenericResponse<ShoppingCart> GetShoppingCart(int userId)
+    public async Task<GenericResponse<ShoppingCart>> GetShoppingCart(int userId)
     {
-        // try
-        // {
-        //     var result = context.ShoppingCarts
-        //         .Include(s => s.Owner)
-        //         .Include(s => s.ShoppingCartItems)
-        //         .ThenInclude(i => i.Product)
-        //         .FirstOrDefault(s => s.OwnerId == userId);
-        //
-        //     if (result == null)
-        //     {
-        //         return new GenericResponse<ShoppingCart>("Le panier n'existe pas pour cet utilisateur", false);
-        //     }
-        //
-        //     return new GenericResponse<ShoppingCart>(result, "Réussi", true);
-        // }
-        // catch (Exception e)
-        // {
-        //     return new GenericResponse<ShoppingCart>("Erreur inattendue: " + e.Message, false);
-        // }
-        return null;
+        var response = await client.GetAsync($"http://localhost:5213/Cart/user/{userId}");
+        var shoppingcart = await response.Content.ReadFromJsonAsync<ShoppingCart>();
+        return new GenericResponse<ShoppingCart>(shoppingcart, "success", true);
     }
 
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Stripe;
@@ -12,30 +13,42 @@ namespace TPcommerce.Controllers
         private readonly StripeSettings _stripeSettings;
         private readonly UserRepository _userRepository;
         private readonly ShoppingCartRepository _shoppingCartRepository;
+        private readonly ProductRepository _productRepository;
 
-        public PaymentController(IOptions<StripeSettings> stripeSettings, UserRepository userRepository, ShoppingCartRepository shoppingCartRepository)
+        public PaymentController(IOptions<StripeSettings> stripeSettings, UserRepository userRepository, ShoppingCartRepository shoppingCartRepository, ProductRepository productRepository)
         {
             _stripeSettings = stripeSettings.Value;
             _userRepository = userRepository;
             _shoppingCartRepository = shoppingCartRepository;
+            _productRepository = productRepository;
         }
 
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var userId = HttpContext.Session.GetInt32("UserId");
-            if (userId == null)
+            var token = HttpContext.Session.GetString("JWT");
+            if (token == null)
             {
                 TempData["message"] = "Veuillez vous connecter.";
-                return RedirectToAction("Login", "User");
+                return RedirectToAction("Index", "User");
             }
-
-            var shoppingCartResponse = _shoppingCartRepository.GetShoppingCart(userId.Value);
+            
+            var handler = new JwtSecurityTokenHandler();
+            var jwt = handler.ReadJwtToken(token);
+            var userId = jwt.Claims.FirstOrDefault(c => c.Type == "id")?.Value;
+            var shoppingCartResponse = _shoppingCartRepository.GetShoppingCart(Convert.ToInt32(userId)).Result;
+            
             if (!shoppingCartResponse.Success)
             {
                 TempData["message"] = shoppingCartResponse.Message;
                 return RedirectToAction("Index", "Home");
+            }
+            
+            foreach (var shoppingCartItem in shoppingCartResponse.Data.ShoppingCartItems)
+            {
+                var product = await _productRepository.GetSingleProduct(shoppingCartItem.ProductId);
+                shoppingCartItem.Product = product.Data;
             }
 
             var shoppingCart = shoppingCartResponse.Data;
@@ -67,94 +80,93 @@ namespace TPcommerce.Controllers
         }
 
         [HttpPost]
-        public IActionResult Charge(string stripeToken)
+        public async Task<IActionResult> Charge(string stripeToken)
         {
-            // var userId = HttpContext.Session.GetInt32("UserId");
-            // if (userId == null)
-            //     return RedirectToAction("Login", "User");
-            //
-            // var user = _userRepository.ShowUserDetails(userId.Value);
-            // var cartResponse = _shoppingCartRepository.GetShoppingCart(user.Id);
-            // if (!cartResponse.Success)
-            // {
-            //     TempData["message"] = cartResponse.Message;
-            //     return RedirectToAction("Index", "ShoppingCart");
-            // }
-            //
-            // var cart = cartResponse.Data;
-            // cart.TotalPrice = cart.ShoppingCartItems.Sum(i => i.Quantity * i.Product.Price);
-            //
-            // var chargeOptions = new ChargeCreateOptions
-            // {
-            //     Amount = (long)(cart.TotalPrice * 100),
-            //     Currency = "cad",
-            //     Description = $"Achat par {user.Username}",
-            //     Source = stripeToken,
-            //     ReceiptEmail = "client@example.com",
-            //     Shipping = new ChargeShippingOptions
-            //     {
-            //         Name = user.Username,
-            //         Address = new AddressOptions
-            //         {
-            //             Line1 = "123 Rue Exemple",
-            //             City = "Lévis",
-            //             State = "QC",
-            //             PostalCode = "G6V0A6",
-            //             Country = "CA"
-            //         }
-            //     }
-            // };
-            //
-            // var chargeService = new ChargeService();
-            // try
-            // {
-            //     var charge = chargeService.Create(chargeOptions);
-            //     if (charge.Status == "succeeded")
-            //     {
-            //         var bill = new Bill
-            //         {
-            //             Products = cart.ShoppingCartItems.Select(i => new BillItem
-            //             {
-            //                 ProductId = i.ProductId,
-            //                 Quantity = i.Quantity
-            //             }).ToList(),
-            //             TotalPrice = (int)cart.TotalPrice,
-            //             OwnerId = user.Id.ToString(),
-            //             PaymentInfos = new PaymentInfos
-            //             {
-            //                 FullName = user.Username,
-            //                 CardType = "Stripe",
-            //                 CardNumber = "**** **** **** 4242",
-            //                 ExpirationDate = "04/29",
-            //                 CVV = "***"
-            //             }
-            //         };
-            //
-            //
-            //         using var context = new TpcommerceContext();
-            //         context.Bills.Add(bill);
-            //         context.SaveChanges();
-            //         _shoppingCartRepository.ClearShoppingCart(user.ShoppingCart.Id);
-            //
-            //
-            //         var fullBill = context.Bills
-            //         .Include(b => b.Products)
-            //             .ThenInclude(p => p.Product)
-            //         .Include(b => b.PaymentInfos)
-            //         .FirstOrDefault(b => b.Id == bill.Id);
-            //
-            //         return View("PaymentSuccess", fullBill);
-            //     }
-            //     else
-            //     {
-            //         return RedirectToAction("PaymentFailure");
-            //     }
-            // }
-            // catch (StripeException)
-            // {
-            //     return RedirectToAction("PaymentFailure");
-            // }
-            return new EmptyResult();
+            var token = HttpContext.Session.GetString("JWT");
+            if (token == null)
+            {
+                TempData["message"] = "Veuillez vous connecter.";
+                return RedirectToAction("Index", "User");
+            }
+            
+            var handler = new JwtSecurityTokenHandler();
+            var jwt = handler.ReadJwtToken(token);
+            var userId = jwt.Claims.FirstOrDefault(c => c.Type == "id")?.Value;
+            var user = _userRepository.ShowUserDetails(Convert.ToInt32(userId), token).Result;
+            var cartResponse = await _shoppingCartRepository.GetShoppingCart(Convert.ToInt32(userId));
+            if (!cartResponse.Success)
+            {
+                TempData["message"] = cartResponse.Message;
+                return RedirectToAction("Index", "ShoppingCart");
+            }
+            
+            foreach (var shoppingCartItem in cartResponse.Data.ShoppingCartItems)
+            {
+                var product = await _productRepository.GetSingleProduct(shoppingCartItem.ProductId);
+                shoppingCartItem.Product = product.Data;
+            }
+            
+            var cart = cartResponse.Data;
+            cart.TotalPrice = cart.ShoppingCartItems.Sum(i => i.Quantity * i.Product.Price);
+            
+            var chargeOptions = new ChargeCreateOptions
+            {
+                Amount = (long)(cart.TotalPrice * 100),
+                Currency = "cad",
+                Description = $"Achat par {user.Username}",
+                Source = stripeToken,
+                ReceiptEmail = "client@example.com",
+                Shipping = new ChargeShippingOptions
+                {
+                    Name = user.Username,
+                    Address = new AddressOptions
+                    {
+                        Line1 = "123 Rue Exemple",
+                        City = "Lévis",
+                        State = "QC",
+                        PostalCode = "G6V0A6",
+                        Country = "CA"
+                    }
+                }
+            };
+            
+            var chargeService = new ChargeService();
+            try
+            {
+                var charge = chargeService.Create(chargeOptions);
+                if (charge.Status == "succeeded")
+                {
+                    var bill = new Bill
+                    {
+                        Products = cart.ShoppingCartItems.Select(i => new BillItem
+                        {
+                            ProductId = i.ProductId,
+                            Quantity = i.Quantity,
+                            Product = i.Product
+                        }).ToList(),
+                        TotalPrice = (int)cart.TotalPrice,
+                        OwnerId = user.Id.ToString(),
+                        PaymentInfos = new PaymentInfos
+                        {
+                            FullName = user.Username,
+                            CardType = "Stripe",
+                            CardNumber = "**** **** **** 4242",
+                            ExpirationDate = "04/29",
+                            CVV = "***"
+                        }
+                    };
+            
+                    return View("PaymentSuccess", bill);
+                }
+                else
+                {
+                    return RedirectToAction("PaymentFailure");
+                }
+            }
+            catch (StripeException)
+            {
+                return RedirectToAction("PaymentFailure");
+            }
         }
     }
 }

@@ -59,19 +59,10 @@ namespace TPcommerce.Repository
             return null;
         }
 
-        public GenericResponse<Product> GetSingleProduct(int id)
+        public async Task<GenericResponse<Product>> GetSingleProduct(int id)
         {
-            // try
-            // {
-            //     TpcommerceContext context = new TpcommerceContext();
-            //     var product = context.Products.Find(id);
-            //     return new GenericResponse<Product>(product!, "reussi", true);
-            // }
-            // catch (Exception e)
-            // {
-            //     return new GenericResponse<Product>("Erreur survenu:" + e, false);
-            // }
-            return null;
+            var product = await _client.GetFromJsonAsync<Product>($"http://localhost:5235/Product/{id}");
+            return new GenericResponse<Product>(product, "Success", true);
         }
 
         public async Task<List<Product>> GetProductsFromAPIRest()
