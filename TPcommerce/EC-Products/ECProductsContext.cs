@@ -17,31 +17,4 @@ public class ECProductsContext : DbContext
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
     }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-
-        modelBuilder.Entity<Product>().HasData(
-            new Product()
-            {
-                Id = 1,
-                Category = "Electronics",
-                Description = "Electronics Electronics",
-                Image = "electronics.jpg",
-                Price = (decimal)10.00,
-                SellerId = 1,
-                Title = "Cellphone"
-            },
-            new Product()
-            {
-                Id = 2,
-                Category = "Meals",
-                Description = "Pizza peperonni",
-                Image = "meals.jpg",
-                Price = (decimal)15.00,
-                SellerId = 1,
-                Title = "Pizza"
-            });
-    }
 }

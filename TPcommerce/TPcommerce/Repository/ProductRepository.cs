@@ -7,9 +7,9 @@ namespace TPcommerce.Repository
     {
         private readonly HttpClient _client;
 
-        public ProductRepository()
+        public ProductRepository(HttpClient client)
         {
-            _client = new HttpClient();
+            _client = client;
         }
 
         public GenericResponse<List<Product>> GetProducts()
@@ -76,19 +76,43 @@ namespace TPcommerce.Repository
 
         public async Task<List<Product>> GetProductsFromAPIRest()
         {
-            // try
-            // {
-            //     var response = await _client.GetStringAsync("https://dummyjson.com/products");
-            //
-            //     var productResponse = JsonConvert.DeserializeObject<ProductResponse>(response);
-            //
-            //     return productResponse?.Products ?? new List<Product>();
-            // }
-            // catch (Exception ex)
-            // {
-            //     return new List<Product>();
-            // }
-            return null;
+            try
+            {
+                var response = await _client.GetStringAsync("https://dummyjson.com/products");
+            
+                var productResponse = JsonConvert.DeserializeObject<ProductResponse>(response);
+            
+                return productResponse?.Products ?? new List<Product>();
+            }
+            catch (Exception ex)
+            {
+                return new List<Product>();
+            }
         }
+
+        public async Task<GenericResponse<string>> PopulateDbContext()
+        {
+            var products = await GetProductsFromAPIRest();
+            foreach (var product in products)
+            {
+                var response = _client.PostAsJsonAsync("http://localhost:5235/Product", product);
+            }
+            return new GenericResponse<string>("success", true);
+
+        }
+        
+        public async Task<bool> HasExistingProducts()
+        {
+            try
+            {
+                var products = await _client.GetFromJsonAsync<List<Product>>("http://localhost:5235/Product");
+                return products != null && products.Count > 0;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

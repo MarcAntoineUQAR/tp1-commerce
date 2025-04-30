@@ -13,7 +13,7 @@ public class UserRepository
     public UserRepository(HttpClient httpClient)
     {
         _httpClient = httpClient;
-        _jsonSerializerOptions = new JsonSerializerOptions(); // configure si besoin
+        _jsonSerializerOptions = new JsonSerializerOptions();
     }
 
     public GenericResponse<User> AddUser(RegisterViewModel creditentials)

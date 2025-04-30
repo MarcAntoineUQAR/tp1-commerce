@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EC-Gateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cf872e561c44121f000c631d5523868f50e5c74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06ddc6d4ffebe0515f7c891412c22e88fdab59bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("EC-Gateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EC-Gateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -25,7 +25,6 @@ public class ProductController(ECProductsContext context) : ControllerBase
     }
     
 
-    // Get product by ID
     [HttpGet("{id}")]
     public async Task<IActionResult> GetProductById(int id)
     {
@@ -47,7 +46,6 @@ public class ProductController(ECProductsContext context) : ControllerBase
         }
     }
 
-    // Add a new product
     [HttpPost]
     public async Task<IActionResult> AddProduct(Product product)
     {
