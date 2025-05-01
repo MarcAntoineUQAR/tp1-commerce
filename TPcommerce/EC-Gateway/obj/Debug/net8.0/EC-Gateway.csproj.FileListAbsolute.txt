@@ -201,14 +201,7 @@ C:\Users\simon\OneDrive\Desktop\tp1-commerce\TPcommerce\EC-Gateway\obj\Debug\net
 C:\Users\simon\OneDrive\Desktop\tp1-commerce\TPcommerce\EC-Gateway\obj\Debug\net8.0\ref\EC-Gateway.dll
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\appsettings.json
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\ocelot.json
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.authentification.json
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.carts.json
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.global.json
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.orders.json
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.payments.json
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.products.json
-C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.SwaggerEndPoints.json
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.users.json
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\EC-Gateway.exe
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\EC-Gateway.deps.json
@@ -399,3 +392,10 @@ C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\obj\Debug\net8.0
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\obj\Debug\net8.0\EC-Gateway.pdb
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\obj\Debug\net8.0\EC-Gateway.genruntimeconfig.cache
 C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\obj\Debug\net8.0\ref\EC-Gateway.dll
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\ocelot.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.authentification.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.carts.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.orders.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.payments.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.products.json
+C:\Users\Maleb\RiderProjects\tp1-commerce\TPcommerce\EC-Gateway\bin\Debug\net8.0\Routes\ocelot.SwaggerEndPoints.json
