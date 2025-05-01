@@ -4,7 +4,6 @@ namespace TPcommerce.Controllers;
 
 public class BillController : Controller
 {
-    // GET
     public IActionResult Index()
     {
         return View();

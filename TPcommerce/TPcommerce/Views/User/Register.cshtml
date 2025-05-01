@@ -14,29 +14,29 @@ var message = TempData["message"];
 
         <form method="post" asp-action="Register" asp-controller="Login">
             <div class="mb-3">
-                <label for="Username" class="form-label">Username</label>
-                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre username", required = "required" })
+                <label for="Username" class="form-label">Nom d'utilisateur'</label>
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre nom d'utilisateur", required = "required" })
             </div>
 
             <div class="mb-3">
-                <label for="Password" class="form-label">Password</label>
+                <label for="Password" class="form-label">Mot de passe</label>
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Entrez votre mot de passe", required = "required" })
             </div>
 
             <div class="mb-3">
-                <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                <label for="ConfirmPassword" class="form-label">Confirmer mot de passe</label>
                 @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirmez votre mot de passe", required = "required" })
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Role</label>
+                <label class="form-label">Rôle</label>
                 <div class="form-check">
                     <input type="radio" id="RoleBuyer" name="Role" value="buyer" class="form-check-input" />
-                    <label for="RoleBuyer" class="form-check-label">Buyer</label>
+                    <label for="RoleBuyer" class="form-check-label">Acheteur</label>
                 </div>
                 <div class="form-check">
                     <input type="radio" id="RoleSeller" name="Role" value="seller" class="form-check-input" />
-                    <label for="RoleSeller" class="form-check-label">Seller</label>
+                    <label for="RoleSeller" class="form-check-label">Vendeur</label>
                 </div>
             </div>
 

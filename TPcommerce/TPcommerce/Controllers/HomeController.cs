@@ -1,18 +1,17 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using TPcommerce.Models;
 using TPcommerce.Repository;
 
 namespace TPcommerce.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-    private readonly BaseRepository _repository;
+    private readonly ProductRepository _productRepository;
 
-    public HomeController(ILogger<HomeController> logger, BaseRepository repository)
+    public HomeController(ProductRepository productRepository)
     {
-        _repository = repository;
-        _logger = logger;
+        _productRepository = productRepository;
     }
 
     public IActionResult Index()
@@ -22,9 +21,15 @@ public class HomeController : Controller
 
     // Sert a peupler la bd pusique le modelOnconfirguring marche pas
     [HttpGet]
-    public IActionResult FirstConnection()
+    public async Task<IActionResult> FirstConnection()
     {
-        _repository.PopulateDbContext();
-        return RedirectToAction("Login", "Login");
+        var hasProducts = await _productRepository.HasExistingProducts();
+        if (!hasProducts)
+        {
+            await _productRepository.PopulateDbContext();
+        }
+
+        return RedirectToAction("Index", "Login");
     }
+
 }

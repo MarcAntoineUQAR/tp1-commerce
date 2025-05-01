@@ -1,0 +1,36 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewBag.Title = "Mes Ventes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4 text-warning fw-bold">Mes Ventes</h2>
+
+    @if (!Model.Any())
+    {
+        <p>Tu n'as encore vendu aucun produit.</p>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Quantité vendue</th>
+                    <th>Total des ventes</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var sale in Model)
+                {
+                    <tr>
+                        <td>@sale.ProductName</td>
+                        <td>@sale.QuantitySold</td>
+                        <td>@sale.TotalRevenue.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

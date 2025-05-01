@@ -15,7 +15,7 @@
                     <h3 class="card-title fw-bold text-warning">@Model.Title</h3>
                     <h5 class="text-muted">Catégorie: <span class="text-dark">@Model.Category</span></h5>
                     <p class="text-secondary">@Model.Description</p>
-                    <h5 class="fw-bold text-success">💰 Prix: @Model.Price $</h5>
+                    <h5 class="fw-bold text-success">@Model.Price $</h5>
 
                     <div class="d-flex align-items-center mt-3">
                         <form method="post" asp-controller="ShoppingCart" asp-action="AddProductToShoppingCart">

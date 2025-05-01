@@ -1,0 +1,46 @@
+﻿@model TPcommerce.Models.Bill
+@{
+    ViewBag.Title = "Paiement Réussi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="text-success">Paiement Réussi</h2>
+    <p>Merci <strong>@Model.PaymentInfos.FullName</strong> pour votre achat !</p>
+
+    <h3 class="mt-4">Facture</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Prix Unitaire</th>
+                <th>Sous-total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Products)
+            {
+                <tr>
+                    <td>@item.Product.Title</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Product.Price.ToString("C")</td>
+                    <td>@(item.Quantity * item.Product.Price)$</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3" class="text-end">Total</th>
+                <th>@Model.TotalPrice.ToString("C")</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="mt-4">
+        <p><strong>Carte utilisée :</strong> @Model.PaymentInfos.CardType</p>
+        <p><strong>Date d'expiration :</strong> @Model.PaymentInfos.ExpirationDate</p>
+    </div>
+
+    <a href="/products" class="btn btn-success mt-3">Retour à la boutique</a>
+</div>

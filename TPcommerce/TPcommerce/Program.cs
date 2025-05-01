@@ -1,13 +1,53 @@
-using Microsoft.AspNetCore.Authentication;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Stripe;
+using TPcommerce.Models;
+using TPcommerce.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<TPcommerce.Repository.UserRepository>();
-builder.Services.AddScoped<TPcommerce.Repository.BaseRepository>();
-builder.Services.AddScoped<TPcommerce.Repository.ProductRepository>();
-builder.Services.AddScoped<TPcommerce.Repository.ShoppingCartRepository>();
+builder.Services.AddHttpClient<UserRepository>();
+builder.Services.AddHttpClient<ProductRepository>();
+builder.Services.AddHttpClient<ShoppingCartRepository>();
+
+// Stripe
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
+builder.Services.AddHttpClient("EC-User", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:5001");
+});
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "ec-auth",
+            ValidAudience = "ec-api",
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("yvanistheabsolutegoatofprogrammation"))
+        };
+    });
+
+
+// Register HttpClient for Microservices
+builder.Services.AddHttpClient("EC-User", c => c.BaseAddress = new Uri("https://localhost:7001"));
+builder.Services.AddHttpClient("EC-Product", c => c.BaseAddress = new Uri("https://localhost:7002"));
+builder.Services.AddHttpClient("EC-ShoppingCart", c => c.BaseAddress = new Uri("https://localhost:7003"));
+builder.Services.AddHttpClient("EC-Bill", c => c.BaseAddress = new Uri("https://localhost:7004"));
+builder.Services.AddHttpClient("EC-Payment", c => c.BaseAddress = new Uri("https://localhost:7005"));
+builder.Services.AddHttpClient("EC-Authentification", c => c.BaseAddress = new Uri("https://localhost:7006"));
+
+// Session
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -15,39 +55,26 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.Use(async (context, next) =>
-{
-    if (context.Request.Path == "/")
-    {
-        context.Response.Redirect("/Home/FirstConnection");
-        return;
-    }
-    await next();
-});
-
 app.UseRouting();
-
 app.UseSession();
-
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=FirstConnection}");
-
 
 app.Run();

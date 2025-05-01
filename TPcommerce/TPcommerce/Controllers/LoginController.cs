@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TPcommerce.Models;
 using TPcommerce.Repository;
@@ -6,31 +7,43 @@ namespace TPcommerce.Controllers;
 
 public class LoginController : Controller
 {
-    private readonly UserRepository _userRepository;
-
-    public LoginController(UserRepository userRepository)
+    public LoginController()
     {
-        _userRepository = userRepository;
     }
 
-    [HttpGet("Login")]
-    public IActionResult Login()
+    [HttpGet]
+    public IActionResult Index()
     {
         return View("../User/Login");
     }
 
     [HttpPost("login")]
-    public IActionResult LoginPost([FromForm] LoginViewModel user)
+    public async Task<IActionResult> LoginPost([FromForm] LoginViewModel user)
     {
-        var result = _userRepository.Login(user);
-        TempData["message"] = result.Message;
-        if (result.Success)
+        using var httpClient = new HttpClient();
+
+        var response = await httpClient.PostAsJsonAsync("http://localhost:5002/Authentification/login", new
         {
-            HttpContext.Session.SetInt32("UserId", result.Data.Id);
-            return RedirectToAction("Index", "Home");
+            Username = user.Username,
+            Password = user.Password
+        });
+
+        if (!response.IsSuccessStatusCode)
+        {
+            ViewBag.Error = "Nom d'utilisateur ou mot de passe incorrect.";
+            return View("../User/Login");
         }
-        return RedirectToAction("Login");
+
+        var result = await response.Content.ReadFromJsonAsync<Dictionary<string, string>>();
+        var token = result["token"];
+
+        HttpContext.Session.SetString("JWT", token);
+
+        return RedirectToAction("Index", "Home");
     }
+
+
+
 
     [HttpGet("logout")]
     public IActionResult Logout()
@@ -44,17 +57,5 @@ public class LoginController : Controller
     public IActionResult GetRegister()
     {
         return View("../User/Register");
-    }
-
-    [HttpPost]
-    public IActionResult Register([FromForm] RegisterViewModel user)
-    {
-        var message = _userRepository.AddUser(user);
-        TempData["message"] = message.Message;
-        if (!message.Success)
-        {
-            return RedirectToAction("GetRegister", "Login");
-        }
-        return RedirectToAction("Login", "Login");
     }
 }

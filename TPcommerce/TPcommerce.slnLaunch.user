@@ -1,0 +1,35 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "EC-Gateway\\EC-Gateway.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "EC-Users\\EC-Users.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "EC-Products\\EC-Products.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "EC-Orders\\EC-Orders.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "EC-Payments\\EC-Payments.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "EC-Authentification\\EC-Authentification.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "EC-Carts\\EC-Carts.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

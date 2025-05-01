@@ -15,12 +15,12 @@ Layout = "_OuterLayout";
 
         <form method="post" asp-action="LoginPost" asp-controller="Login">
             <div class="mb-3">
-                <label for="Username" class="form-label">Username</label>
-                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre username", required = "required" })
+                <label for="Username" class="form-label">Nom d'utilisateur</label>
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Entrez votre nom d'utilisateur", required = "required" })
             </div>
 
             <div class="mb-3">
-                <label for="Password" class="form-label">Password</label>
+                <label for="Password" class="form-label">Mot de passe</label>
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Entrez votre mot de passe", required = "required" })
             </div>
 
@@ -28,7 +28,7 @@ Layout = "_OuterLayout";
         </form>
 
         <div class="text-center mt-3">
-            <a href="/register" class="btn btn-link">Se créer un nouveau compte</a>
+            <a href="/register" class="btn btn-link">Créer un compte</a>
         </div>
     </div>
 </div>
