@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\EC-Products.props" />
-</Project>
